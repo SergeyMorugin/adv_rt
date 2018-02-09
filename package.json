@@ -1,6 +1,4 @@
 {
-  "name": "adv_rt",
-  "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.2.1",
     "babel-preset-react": "^6.24.1",
