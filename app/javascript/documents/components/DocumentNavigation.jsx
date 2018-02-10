@@ -7,13 +7,13 @@ const DocumentNavigation = (props) => {
   if (props.direction === 'previous') {
     element = (
       <Link className='link-previous' to={`/?document=${props.otherDocumentId}`}>
-        <i className='fa fa-angle-left' aria-hidden='true'>prev<span /></i>
+        <i className='fa fa-angle-left' aria-hidden='true'><span /></i>
       </Link>
     )
   } else {
     element = (
       <Link className='link-next' to={`/?document=${props.otherDocumentId}`}>
-        <i className='fa fa-angle-right' aria-hidden='true'>next<span /></i>
+        <i className='fa fa-angle-right' aria-hidden='true'><span /></i>
       </Link>
     )
   }
