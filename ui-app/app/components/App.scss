@@ -1,0 +1,43 @@
+.app {
+  header {
+    position: relative;
+    background: #317ABE;
+    color: #FFF;
+    height: 85px;
+    font-size: 0.9rem;
+    z-index: 200;
+
+    display: flex;
+    align-items: center;
+
+    >*{
+      margin: 23px;
+    }
+
+    h1{
+      margin:0;
+      font-size: 1.5em;
+    }
+    
+    a{
+      color: #FFF;
+    }
+
+  }
+  main {
+    position: fixed;
+    top: 85px;
+    left: 65px;
+    bottom: 0;
+    right: 0;
+    background: #E0E3E5;
+  }
+}
+
+.fillHeader{
+  flex: 1;
+}
+
+.helpIcon{
+  font-size: 28px;
+}
