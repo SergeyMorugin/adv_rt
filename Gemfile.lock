@@ -38,6 +38,9 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_as_versioned (0.2.3)
+      activerecord (>= 1.10.1)
+      activesupport (>= 1.1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
@@ -62,6 +65,11 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    delayed_job (4.1.4)
+      activesupport (>= 3.0, < 5.2)
+    delayed_job_active_record (4.1.2)
+      activerecord (>= 3.0, < 5.2)
+      delayed_job (>= 3.0, < 5)
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.21)
@@ -183,9 +191,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_versioned
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  delayed_job_active_record
   font-awesome-rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
