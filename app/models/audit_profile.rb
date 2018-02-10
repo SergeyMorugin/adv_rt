@@ -1,0 +1,2 @@
+class AuditProfile < ApplicationRecord
+end

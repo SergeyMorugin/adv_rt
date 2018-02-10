@@ -1,0 +1,2 @@
+class RegulationRule < ApplicationRecord
+end

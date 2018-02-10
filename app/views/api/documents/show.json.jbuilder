@@ -1,0 +1,1 @@
+json.extract! @document, :id, :name, :doctype, :content_html, :content_text, :next_id, :previous_id
