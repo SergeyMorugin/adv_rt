@@ -17,6 +17,7 @@ import styles from './App.scss';
 // Routes
 import SignIn from '~/routes/Auth/SignIn';
 import Dashboard from '~/routes/Dashboard';
+import Audits from '~/routes/Audits';
 
 
 class App extends React.Component {
@@ -88,6 +89,7 @@ class App extends React.Component {
                         <Switch>
                             <Route exact path="/" component={ SignIn }/>
                             <PrivateRoute exact path="/dashboard" component={ Dashboard }/>
+                            <PrivateRoute exact path="/audits" component={ Audits }/>
                         </Switch>
                     </main>
                 </div>

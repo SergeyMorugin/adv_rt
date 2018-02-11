@@ -1,0 +1,11 @@
+.audits {
+  &>header{
+
+    display: flex;
+
+    h1 {
+      color: #666;
+      font-size: 30px;
+    }
+  }
+}
