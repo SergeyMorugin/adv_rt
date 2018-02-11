@@ -1,0 +1,33 @@
+.singleMetric {
+  border-radius: 500px;
+  text-align: center;
+  background: #F0F1F2;
+  color: #7B8993;
+  border: 1px solid #7B8993;
+  line-height: 1.5em;
+  height: auto;
+  padding-top: 100%;
+  position: relative;
+
+
+  &>div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    &>div:first-child{
+      font-size: 35px;
+    }
+    &>div:last-child{
+      font-size: 12px;
+    }
+  }
+}

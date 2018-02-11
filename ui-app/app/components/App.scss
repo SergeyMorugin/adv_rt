@@ -1,5 +1,5 @@
 .app {
-  header {
+  &>header {
     position: relative;
     background: $header-bg-color;
     color: #FFF;
@@ -31,6 +31,7 @@
     bottom: 0;
     right: 0;
     background: #E0E3E5;
+    padding: 35px 40px;
   }
 }
 
