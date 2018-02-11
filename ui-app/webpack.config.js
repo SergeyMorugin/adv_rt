@@ -19,7 +19,7 @@ module.exports = ({ base }) => {
         devtool: isProd ? false : 'eval-source-map',
 
         entry: isClient
-            ? { index: path.join(__dirname, './app/index.jsx'), vendor: ['react', 'react-dom'] }
+            ? {sassbase: path.join(__dirname, './app/index.scss'),  index: path.join(__dirname, './app/index.jsx'), vendor: ['react', 'react-dom'] }
             : { server: path.join(__dirname, 'server.js') },
 
         output: {
@@ -65,8 +65,8 @@ module.exports = ({ base }) => {
                         {
                             loader: 'sass-loader' ,
                             options: {
-                                data: '@import "_variables";', // I tried _variables as well
-                                includePaths: [path.resolve(__dirname, "app/sass")]
+                                data: '@import "_base";', // I tried _variables as well
+                                includePaths: [path.resolve(__dirname, "app/sass"), path.resolve(__dirname, "node_modules")]
                             }
                         }
                     ]

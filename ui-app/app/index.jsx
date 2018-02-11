@@ -12,7 +12,6 @@ import reducers from './reducers'
 import App from './components/App'
 import signOut from "~/actions/signOut";
 
-
 // create history
 const history = createHistory()
 
