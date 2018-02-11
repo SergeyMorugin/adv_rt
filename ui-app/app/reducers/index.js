@@ -1,6 +1,11 @@
 const initialState = {
-    isAuthenticated: false,
-    identity: null
+    isAuthenticated: true,
+    identity: {
+        fullName: 'Jane Smith',
+        level: 3,
+        points: 284,
+        rating: 3
+    }
 };
 
 export default  {

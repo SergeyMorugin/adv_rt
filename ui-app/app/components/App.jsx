@@ -9,6 +9,7 @@ import MenuIcon from './common/MenuIcon'
 import Sidebar from './Sidebar'
 import Identity from './Identity'
 import PrivateRoute from './PrivateRoute'
+import Searchbar from './Searchbar'
 
 // style
 import styles from './App.scss';
@@ -60,7 +61,11 @@ class App extends React.Component {
                             />
                         </div>
                         <h1> LICENSEE LOGO </h1>
-                        <div className={styles.fillHeader}/>
+                        <div className={styles.fillHeader}>
+                            { this.props.isAuthenticated &&
+                            <Searchbar/>
+                            }
+                        </div>
 
                         { this.props.isAuthenticated &&
                             <Identity/>

@@ -62,7 +62,13 @@ module.exports = ({ base }) => {
                                 localIdentName: '[name]--[local]--[hash:base64:5]'
                             }
                         },
-                        { loader: 'sass-loader' }
+                        {
+                            loader: 'sass-loader' ,
+                            options: {
+                                data: '@import "_variables";', // I tried _variables as well
+                                includePaths: [path.resolve(__dirname, "app/sass")]
+                            }
+                        }
                     ]
                     : [
                         {
