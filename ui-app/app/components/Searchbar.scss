@@ -11,6 +11,12 @@
     border-radius: 5px;
     background-color: lighten($header-bg-color, 10%);
     border-color: darken($header-bg-color, 5%);
+    transition: all 0.15s;
+
+    &:focus{
+    transition: all 0.15s;
+      background-color: #FFF;
+    }
 
     &+i{
       position: absolute;

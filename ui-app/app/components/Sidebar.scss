@@ -38,6 +38,10 @@ $sb-bg-color: #2D323F;
       }
     }
   }
+
+  &:hover{
+    width: $sb-width;
+  }
 }
 
 .opened{
