@@ -33,7 +33,14 @@ gem 'jbuilder', '~> 2.5'
 # use WebPacker to enable React ― See React with webpacker and Rails 5.1 Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 3.2'
 
+# used on Frontend for fonts and icons.
 gem 'font-awesome-rails'
+
+## Delayed jobs for background processing of work via Redis
+gem 'delayed_job_active_record'
+
+# Allows versioning of active record models
+gem 'acts_as_versioned'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
