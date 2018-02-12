@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { connect, Provider } from 'react-redux'
+import thunk from 'redux-thunk'
 
 import {routerReducer, routerMiddleware, push} from 'react-router-redux'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
@@ -18,7 +19,7 @@ const history = createHistory()
 // create store
 const store = createStore(
     combineReducers({ ...reducers, router: routerReducer }),
-    applyMiddleware(routerMiddleware(history)),
+    applyMiddleware(thunk, routerMiddleware(history)),
 )
 
 const ConnectedApp = connect(

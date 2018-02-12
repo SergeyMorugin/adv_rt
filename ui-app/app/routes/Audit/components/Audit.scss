@@ -1,0 +1,30 @@
+.audit {
+  &>header{
+
+    display: flex;
+
+    input {
+      background: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      display: inline-block;
+      width: 300px;
+
+      &+i{
+        visibility: hidden;
+        opacity: 0;
+        transition: all .2s;
+      }
+
+      &:hover:not(:focus){
+        border-bottom: 1px dotted #999;
+
+        &+i{
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+}

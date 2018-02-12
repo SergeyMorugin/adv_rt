@@ -37,7 +37,6 @@ class Identity extends React.Component {
 
 
 export default connect(state => {
-    console.log(state);
     return {
         identity: state.auth.identity
     };

@@ -15,9 +15,10 @@ import Searchbar from './Searchbar'
 import styles from './App.scss';
 
 // Routes
-import SignIn from '~/routes/Auth/SignIn';
-import Dashboard from '~/routes/Dashboard';
-import Audits from '~/routes/Audits';
+import SignIn from '../routes/Auth/SignIn';
+import Dashboard from '../routes/Dashboard';
+import Audits from '../routes/Audits';
+import Audit from '../routes/Audit';
 
 
 class App extends React.Component {
@@ -90,6 +91,7 @@ class App extends React.Component {
                             <Route exact path="/" component={ SignIn }/>
                             <PrivateRoute exact path="/dashboard" component={ Dashboard }/>
                             <PrivateRoute exact path="/audits" component={ Audits }/>
+                            <PrivateRoute exact path="/audit/:id" component={ Audit }/>
                         </Switch>
                     </main>
                 </div>
