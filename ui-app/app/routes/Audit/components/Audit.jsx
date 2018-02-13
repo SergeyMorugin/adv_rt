@@ -5,6 +5,7 @@ import styles from './Audit.scss';
 import Spinner from '../../../components/common/Spinner'
 import Progressbar from '../../../components/common/Progressbar'
 import DocumentDropdown from './DocumentDropdown'
+import Checklist from './Checklist'
 
 export default class Audit extends Component {
 
@@ -67,7 +68,14 @@ export default class Audit extends Component {
                     </header>
 
                     <div className={styles.auditContent}>
-                        {this.renderDocument()}
+                        <div className="row fullWidth">
+                            <div className="column small-8">
+                                {this.renderDocument()}
+                            </div>
+                            <div className="column small-4">
+                                <Checklist />
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -90,7 +98,7 @@ export default class Audit extends Component {
             return <Spinner/>
         } else if (this.props.document.status === 'ok') {
             let document = this.props.document.data;
-            return <div>{document.documentTitle}</div>
+            return <div className={ styles.documentWrapper } dangerouslySetInnerHTML={{ __html: document.html }}></div>
         } else {
             return <div>Error: {this.props.document.error }</div>
         }
