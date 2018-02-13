@@ -37,6 +37,7 @@
   right: 0;
   bottom: 0;
   background: darken($app-bg-color, 8%);
+  overflow: auto;
 }
 
 .headerTop{

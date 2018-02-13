@@ -43,7 +43,7 @@
 //@include foundation-tooltip;
 //@include foundation-top-bar;
 //@include foundation-visibility-classes;
-//@include foundation-float-classes;
+@include foundation-float-classes;
 
 
 @import "./vendor/react_table";
@@ -56,4 +56,34 @@
 
 .muted{
   color: $color-disabled-grey;
+}
+
+.button{
+  &.partialComplete, &.pass{
+    color: #FFF;
+
+    &:hover, &:active, &:active{
+      color: #FFF;
+    }
+  }
+
+  &.hoverPass:hover{
+    background: map-get($foundation-palette, 'pass');
+  }
+  &.hoverBestPractise:hover{
+    background: map-get($foundation-palette, 'bestPractise');
+  }
+  &.hoverPartialComplete:hover{
+    background: map-get($foundation-palette, 'partialComplete');
+  }
+  &.hoverFail:hover{
+    background: map-get($foundation-palette, 'fail');
+  }
+
+  &.hoverPass, &.hoverBestPractise, &.hoverPartialComplete, &.hoverFail{
+    &.hollow:not(.disabled):hover {
+      border-color: transparent !important;
+      color: #FFF;
+    }
+  }
 }

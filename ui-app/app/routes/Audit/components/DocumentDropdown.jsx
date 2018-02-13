@@ -112,6 +112,9 @@ export default class DocumentDropdown extends Component {
 
                                 </div>
                             ))}
+
+                            <input type="file" />
+
                         </div>
                     )
 

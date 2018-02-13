@@ -7,6 +7,65 @@ import Progressbar from '../../../components/common/Progressbar'
 import DocumentDropdown from './DocumentDropdown'
 import Checklist from './Checklist'
 
+const checkListItems = [
+
+    {
+        key: "INC01",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: 'not_applicable'
+    },
+    {
+        key: "INC02",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: 'pass'
+    },
+    {
+        key: "INC03",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: null
+    },
+    {
+        key: "INC04",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: 'fail'
+    },
+    {
+        key: "INC05",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: 'best_practise'
+    },
+    {
+        key: "INC06",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: 'partial_complete'
+    },
+    {
+        key: "INC07",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: 'partial_complete'
+    },
+    {
+        key: "INC08",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: null
+    },
+    {
+        key: "INC09",
+        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
+        note: "",
+        status: 'fail'
+    },
+
+];
+
 export default class Audit extends Component {
 
 
@@ -73,7 +132,7 @@ export default class Audit extends Component {
                                 {this.renderDocument()}
                             </div>
                             <div className="column small-4">
-                                <Checklist />
+                                <Checklist items={checkListItems}/>
                             </div>
                         </div>
                     </div>
