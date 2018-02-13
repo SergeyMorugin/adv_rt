@@ -1,3 +1,69 @@
-.docDd{
+$doc-dd-box-right-offset: 70px;
+$doc-dd-box-arrow-width: 25px;
+$doc-dd-box-arrow-height: 13px;
+$doc-dd-width: 300px;
 
+.docDd{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: $doc-dd-width;
+}
+
+.opener{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+
+  i{
+    font-size: 0.85em;
+    color: lighten($color-disabled-grey, 10%);
+    margin-left: 8px;
+  }
+}
+
+.box {
+  position: absolute;
+  left: -50px;
+  right: -$doc-dd-box-right-offset;
+  top: 100%;
+  top: calc(100% + 8px);
+  background: #FFF;
+  box-shadow: 0px 0px 19px -2px rgba(0, 0, 0, 0.32);
+}
+
+.boxArrow{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $doc-dd-box-arrow-width/2 $doc-dd-box-arrow-height $doc-dd-box-arrow-width/2;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  top: -$doc-dd-box-arrow-height;
+  right: $doc-dd-box-right-offset - 6px;
+}
+
+.docListItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 12px;
+
+  &:hover{
+    background: #EEE;
+  }
+
+  &>i{
+    font-size: 37px;
+    margin-right: 12px;
+    color: $color-disabled-grey;
+  }
+}
+
+.documentType{
+  font-size: 0.7em;
+  color: $color-disabled-grey;
+  font-weight: 300;
 }

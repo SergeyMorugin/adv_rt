@@ -52,15 +52,15 @@ export default class Audit extends Component {
                         </div>
 
                         <div>
-                            <div>
-                                <span>SOA</span>
-                                <DocumentDropdown
-                                    documents={audit.documents}
-                                    selectedDocument={this.props.document}
-                                    onDocPick={(docId) => {
-                                        this.props.loadDocument(docId)
-                                    }}
-                                />
+                            <div className={styles.soaDropdownWrapper}>
+                                <label>SOA</label>
+                                    <DocumentDropdown
+                                        documents={audit.documents}
+                                        selectedDocument={this.props.document}
+                                        onDocPick={(docId) => {
+                                            this.props.loadDocument(docId)
+                                        }}
+                                    />
                             </div>
                         </div>
 
@@ -85,7 +85,7 @@ export default class Audit extends Component {
     renderDocument() {
 
         if (!this.props.document) {
-            return <div>Pick a document</div>
+            return <div>Select a document</div>
         } else if (this.props.document.status === 'loading') {
             return <Spinner/>
         } else if (this.props.document.status === 'ok') {

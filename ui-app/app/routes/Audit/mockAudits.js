@@ -4,7 +4,7 @@ export default {
     2:
         {
             id: 2,
-            name: 'first audi',
+            name: 'First audi',
             adviser: "Bob William",
             company: "ABC Financial certaint\t",
             location: "Sydney",
@@ -17,13 +17,15 @@ export default {
                 {
                     key: 1,
                     id: 1,
-                    documentType: 'pdf',
+                    documentType: 'SOA',
+                    documentFileType: 'pdf',
                     documentTitle: 'Fergusson SOA 020318.pdf'
                 },
                 {
                     key: 2,
                     id: 2,
-                    documentType: 'pdf',
+                    documentType: 'SOA',
+                    documentFileType: 'pdf',
                     documentTitle: 'Fergusson SOA 100318.pdf'
                 }
             ]
@@ -32,7 +34,7 @@ export default {
     3:
         {
             id: 3,
-            name: 'other audit',
+            name: 'Other audit',
             adviser: "Bob William",
             company: "ABC Financial certaint\t",
             location: "Sydney",

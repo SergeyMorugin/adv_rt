@@ -6,7 +6,7 @@
     justify-content: space-between;
 
     background: #E0E3E5;
-    box-shadow: 0px 10px 61px -6px rgba(0,0,0,0.59);
+    box-shadow: 0px 10px 61px -6px rgba(0,0,0,0.3);
 
     position: absolute;
     top: 0;
@@ -14,8 +14,19 @@
     left: 0;
     height: $audit-header-height;
     z-index: 50;
-    padding: 12px 18px;
+    padding: 12px 25px;
 
+  }
+}
+
+.soaDropdownWrapper{
+  display: flex;
+
+  label{
+    color: $color-disabled-grey;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: 300;
   }
 }
 
@@ -46,6 +57,8 @@
     margin: 0;
     padding:5px;
     margin-left: -5px;
+    font-size: 1rem;
+    font-weight: 300;
 
     &:focus{
       border-color: #c5c5c5;
