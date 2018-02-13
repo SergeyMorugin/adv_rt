@@ -2,29 +2,84 @@
   &>header{
 
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    input {
-      background: transparent;
-      border-color: transparent;
-      box-shadow: none;
-      display: inline-block;
-      width: 300px;
+    background: #E0E3E5;
+    box-shadow: 0px 10px 61px -6px rgba(0,0,0,0.59);
 
-      &+i{
-        visibility: hidden;
-        opacity: 0;
-        transition: all .2s;
-      }
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $audit-header-height;
+    z-index: 50;
+    padding: 12px 18px;
 
-      &:hover:not(:focus){
-        border-bottom: 1px dotted #999;
+  }
+}
 
-        &+i{
-          visibility: visible;
-          opacity: 1;
-        }
-      }
+.auditContent{
+  position: absolute;
+  top: $audit-header-height;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
+.headerTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editableAuditName{
+  position: relative;
+
+  input {
+    color: $color-disabled-grey;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    display: inline-block;
+    width: 400px;
+    margin: 0;
+    padding:5px;
+    margin-left: -5px;
+
+    &:focus{
+      border-color: #c5c5c5;
     }
   }
+
+  i{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .1s ease-in-out;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+  }
+
+  input, i{
+    cursor: pointer;
+  }
+
+  &:hover input:not(:focus){
+
+    border-bottom: 1px dotted #999;
+
+    &+i{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  input:focus, input:focus+i{
+    cursor: auto;
+  }
+}
+
+.progress{
+  width: 200px;
 }

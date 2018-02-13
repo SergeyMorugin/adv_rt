@@ -3,7 +3,7 @@
     position: relative;
     background: $header-bg-color;
     color: #FFF;
-    height: 85px;
+    height: $header-height;
     font-size: 0.9rem;
     z-index: 200;
 
@@ -11,7 +11,7 @@
     align-items: center;
 
     >*{
-      margin: 23px;
+      margin: 0 23px;
     }
 
     h1{
@@ -26,12 +26,13 @@
   }
   main {
     position: fixed;
-    top: 85px;
+    top: $header-height;
     left: 65px;
     bottom: 0;
     right: 0;
     background: #E0E3E5;
-    padding: 35px 40px;
+    padding: $main-vpadding $main-hpadding;
+    overflow: auto;
   }
 }
 
@@ -41,4 +42,9 @@
 
 .helpIcon{
   font-size: 28px;
+}
+
+.signOut{
+  font-size: 17px;
+  cursor: pointer;
 }

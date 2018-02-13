@@ -1,0 +1,57 @@
+.wrapper{
+  display: flex;
+  position: relative;
+
+  &>*{
+    padding: 0 8px;
+  }
+}
+
+.percent{
+  width: 75px;
+
+  display: flex;
+  align-items: center;
+}
+
+.percentFloating{
+  position: absolute;
+  top: 0;
+  left:0;
+  right:0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.progressbar{
+  flex: 1;
+  position: relative;
+  border: 1px solid #B5BBBD;
+  border-radius: 3px;
+  height: 25px;
+
+  transition: all 0.2s ease-in-out;
+
+  &>div{
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    width: 0;
+    background: #B5BBBD;
+
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.colorComplete{
+  border-color: #81c54d;
+
+  &>div{
+    background: #81c54d;
+  }
+}

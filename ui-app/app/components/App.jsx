@@ -76,7 +76,7 @@ class App extends React.Component {
                         <NavLink exact to="/help"> <i className={"far fa-question-circle " + styles.helpIcon}></i></NavLink>
 
                         { this.props.isAuthenticated &&
-                            <div onClick={this.props.singout}>Sign out</div>
+                            <div onClick={this.props.singout} className={styles.signOut}>Sign out</div>
                         }
 
                     </header>

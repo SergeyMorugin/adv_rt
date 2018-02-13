@@ -10,7 +10,7 @@ $sb-bg-color: #2D323F;
   position: fixed;
   left: 0;
   bottom: 0;
-  top: 85px;
+  top: $header-height;
   z-index: 1000000;
 
   &>ul{

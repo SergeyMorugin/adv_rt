@@ -43,6 +43,7 @@ module.exports = ({ base }) => {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
+                    babelrc: false,
                     presets: [
                         ['env', { 'targets': { 'browsers': ['last 2 versions']}}],
                         'react',
