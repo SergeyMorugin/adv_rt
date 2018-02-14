@@ -14,6 +14,18 @@ export default class ChecklistItem extends Component {
         }
     }
 
+    componentDidMount() {
+
+        // if item is active, load initial document
+        if (this.props.isActive) {
+            // load document and scroll to section
+            let relevantSection = this.props.item.relevantSections[this.state.activeRelevantSectionIndex];
+            if (relevantSection) {
+                this.props.showDocument(relevantSection.doc, relevantSection.section)
+            }
+        }
+    }
+
     getButtonClass(status, item) {
 
         let classes = ['expanded', 'button'];
