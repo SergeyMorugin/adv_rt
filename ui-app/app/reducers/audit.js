@@ -1,6 +1,7 @@
 const initialState = {
     audit: {status: "loading"},
     document: null,
+    documentSection: null,
     auditList: {status: "loading"}
 };
 
@@ -52,11 +53,17 @@ export default (state = initialState , action) => {
             return {
                 ...state,
                 document: {status: "ok", data: action.document},
+                documentSection: action.documentSection
             };
         case 'FETCH_DOCUMENT_FAIL':
             return {
                 ...state,
                 document: {status: "error", error: action.error},
+            };
+        case 'GO_TO_DOCUMENT_SECTION':
+            return {
+                ...state,
+                documentSection: action.documentSection
             };
         default:
             return state

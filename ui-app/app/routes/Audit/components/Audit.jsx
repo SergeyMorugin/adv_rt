@@ -13,55 +13,85 @@ const checkListItems = [
         key: "INC01",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: 'not_applicable'
+        status: 'not_applicable',
+        relevantSections: [
+            {doc: 1, section: "section1"},
+            {doc: 1, section: "section2"},
+            {doc: 2, section: "section1"},
+        ]
     },
     {
         key: "INC02",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: 'pass'
+        status: 'pass',
+        relevantSections: [
+            {doc: 2, section: "section1"},
+        ]
     },
     {
         key: "INC03",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: null
+        status: null,
+        relevantSections: [
+            {doc: 1, section: "section2"}
+        ]
     },
     {
         key: "INC04",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: 'fail'
+        status: 'fail',
+        relevantSections: [
+            {doc: 1, section: "section2"},
+            {doc: 1, section: "section1"},
+        ]
     },
     {
         key: "INC05",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: 'best_practise'
+        status: 'best_practise',
+        relevantSections: [
+            {doc: 1, section: "section2"}
+        ]
     },
     {
         key: "INC06",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: 'partial_complete'
+        status: 'partial_complete',
+        relevantSections: [
+            {doc: 1, section: "section2"}
+        ]
     },
     {
         key: "INC07",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: 'partial_complete'
+        status: 'partial_complete',
+        relevantSections: [
+            {doc: 1, section: "section2"}
+        ]
     },
     {
         key: "INC08",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: null
+        status: null,
+        relevantSections: [
+            {doc: 1, section: "section2"}
+        ]
     },
     {
         key: "INC09",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
         note: "",
-        status: 'fail'
+        status: 'fail',
+        relevantSections: [
+            {doc: 1, section: "section2"}
+        ]
     },
 
 ];
@@ -132,7 +162,20 @@ export default class Audit extends Component {
                                 {this.renderDocument()}
                             </div>
                             <div className="column small-4">
-                                <Checklist items={checkListItems}/>
+                                <Checklist
+                                    items={checkListItems}
+                                    showDocument={(docId, section) => {
+                                        if (
+                                            this.props.document &&
+                                            this.props.document.status == 'ok' &&
+                                            docId === this.props.document.data.id)
+                                        {
+                                            this.props.goToDocumentSection(section)
+                                        } else {
+                                            this.props.loadDocument(docId, section)
+                                        }
+                                    }}
+                                />
                             </div>
                         </div>
                     </div>

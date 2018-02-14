@@ -1,6 +1,7 @@
-export default (document) => {
+export default (document, section) => {
     return {
         type: 'FETCH_DOCUMENT_SUCCESS',
-        document: document
+        document: document,
+        documentSection: section
     }
 }

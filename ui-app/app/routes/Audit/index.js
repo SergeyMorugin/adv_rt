@@ -9,6 +9,7 @@ import fetchAuditFail from '~/actions/fetchAuditFail'
 import fetchDocument from '~/actions/fetchDocument'
 import fetchDocumentSuccess from '~/actions/fetchDocumentSuccess'
 import fetchDocumentFail from '~/actions/fetchDocumentFail'
+import goToDocumentSection from '~/actions/goToDocumentSection'
 
 import mockAudits from './mockAudits'
 import mockDocuments from './mockDocuments'
@@ -18,6 +19,7 @@ export default connect(
         return {
             audit: state.audit.audit,
             document: state.audit.document,
+            documentSection: state.audit.documentSection,
         }
     },
     dispatch => ({
@@ -39,18 +41,22 @@ export default connect(
 
         // callback to load the document from the component
         // TODO load from server instead of the "setTimeout"
-        loadDocument: docId => {
+        loadDocument: (docId, section)=> {
             dispatch(fetchDocument());
 
             setTimeout(function(){
                 if (docId in mockDocuments) {
-                    return dispatch(fetchDocumentSuccess(mockDocuments[docId]))
+                    return dispatch(fetchDocumentSuccess(mockDocuments[docId], section))
                 } else {
                     return dispatch(fetchDocumentFail('Cannot load document'))
                 }
 
             }, 1000)
+        },
 
+        // callback to jump to document section without reloading
+        goToDocumentSection: (section)=> {
+            dispatch(goToDocumentSection(section));
         },
     })
 )(Container)
