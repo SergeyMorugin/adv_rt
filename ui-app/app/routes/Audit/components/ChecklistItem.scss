@@ -31,8 +31,8 @@
   }
 
   &>:first-child{
-    width: 70px;
-    margin-right: 10px;
+    width: 65px;
+    margin-right: 15px;
     font-size: 1.2em;
   }
 
@@ -82,6 +82,10 @@
       margin: 0 !important;
     }
   }
+}
+
+.itemText{
+  font-weight: normal;
 }
 
 @include breakpoint(large) {

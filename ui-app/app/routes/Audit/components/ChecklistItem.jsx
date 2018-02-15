@@ -124,14 +124,9 @@ export default class ChecklistItem extends Component {
                     }
                 }}
             >
-
-                { !this.props.isActive &&
-                    <Ink background={false} opacity={0.1}/> // ripple effect only when item is not active
-                }
-
                 <div>{item.key}</div>
                 <div>
-                    <span className="itemText">{item.text}</span>
+                    <span className={styles.itemText}>{item.text}</span>
 
                     <div className={styles.itemDetails}>
                         <div className="row small-up-2 xlarge-up-4">
@@ -181,6 +176,9 @@ export default class ChecklistItem extends Component {
                         </div>
                     </div>
                 </div>
+                { !this.props.isActive &&
+                <Ink background={false} opacity={0.1}/> // ripple effect only when item is not active
+                }
             </li>
         )
     }
