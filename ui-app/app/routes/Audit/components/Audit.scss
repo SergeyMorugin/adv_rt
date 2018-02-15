@@ -50,6 +50,13 @@
   position: relative;
 
   input {
+
+    &:focus{
+      border-color: transparent;
+      background: transparent;
+      box-shadow: none;
+    }
+
     color: $color-disabled-grey;
     background: transparent;
     border-color: transparent;
@@ -62,9 +69,7 @@
     font-size: 1rem;
     font-weight: 300;
 
-    &:focus{
-      border-color: #c5c5c5;
-    }
+
   }
 
   i{
@@ -74,13 +79,15 @@
     position: absolute;
     right: 0;
     bottom: 8px;
+    font-size: 0.9em;
+    color: $color-light-grey;
   }
 
   input, i{
     cursor: pointer;
   }
 
-  &:hover input:not(:focus){
+  &:hover input, input:focus{
 
     border-bottom: 1px dotted #999;
 

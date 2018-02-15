@@ -13,7 +13,7 @@ const checkListItems = [
     {
         key: "INC01",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "",
         status: 'not_applicable',
         relevantSections: [
             {doc: 1, section: "section1"},
@@ -24,7 +24,7 @@ const checkListItems = [
     {
         key: "INC02",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "Every is right.",
         status: 'pass',
         relevantSections: [
             {doc: 2, section: "section1"},
@@ -33,7 +33,7 @@ const checkListItems = [
     {
         key: "INC03",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "",
         status: null,
         relevantSections: [
             {doc: 1, section: "section2"}
@@ -42,7 +42,7 @@ const checkListItems = [
     {
         key: "INC04",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "",
         status: 'fail',
         relevantSections: [
             {doc: 1, section: "section2"},
@@ -52,7 +52,7 @@ const checkListItems = [
     {
         key: "INC05",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "",
         status: 'best_practise',
         relevantSections: [
             {doc: 1, section: "section2"}
@@ -61,7 +61,7 @@ const checkListItems = [
     {
         key: "INC06",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "",
         status: 'partial_complete',
         relevantSections: [
             {doc: 1, section: "section2"}
@@ -70,7 +70,7 @@ const checkListItems = [
     {
         key: "INC07",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "",
         status: 'partial_complete',
         relevantSections: [
             {doc: 1, section: "section2"}
@@ -79,7 +79,7 @@ const checkListItems = [
     {
         key: "INC08",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "",
         status: null,
         relevantSections: [
             {doc: 1, section: "section2"}
@@ -88,7 +88,7 @@ const checkListItems = [
     {
         key: "INC09",
         text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        note: "",
+        notes: "",
         status: 'fail',
         relevantSections: [
             {doc: 1, section: "section2"}
@@ -159,10 +159,10 @@ export default class Audit extends Component {
 
                     <div className={styles.auditContent}>
                         <div className="row fullWidth">
-                            <div className="column small-8">
+                            <div className="column small-7 xlarge-8">
                                 <DocumentBody document={this.props.document} />
                             </div>
-                            <div className="column small-4">
+                            <div className="column small-5 xlarge-4">
                                 <Checklist
                                     items={checkListItems}
                                     showDocument={(docId, section) => {

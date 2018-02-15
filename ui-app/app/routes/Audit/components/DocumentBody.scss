@@ -1,7 +1,7 @@
 .documentWrapper{
   background: #FFF;
-  padding: 104px 100px 150px 120px;
-  margin: 30px;
+  padding: 104px 30px 150px 30px;
+  margin: 30px -15px 30px 12px;
   position: relative;
 
 
@@ -20,6 +20,14 @@
     display: block;
     width: 0;
     box-shadow: -2px 3px 2px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@include breakpoint(large) {
+  .documentWrapper {
+    background: #FFF;
+    padding: 104px 100px 150px 120px;
+    margin: 30px;
   }
 }
 

@@ -76,7 +76,7 @@ export default class ChecklistItem extends Component {
 
     getItemClass(item) {
 
-        let classes = [];
+        let classes = [styles.item];
 
         if(this.props.isActive) {
             classes.push(styles.activeItem)
@@ -127,7 +127,7 @@ export default class ChecklistItem extends Component {
                     <span className="itemText">{item.text}</span>
 
                     <div className={styles.itemDetails}>
-                        <div className="row small-up-4">
+                        <div className="row small-up-2 xlarge-up-4">
                             <div className="column">
                                 <button className={this.getButtonClass('fail', item)}>Fail</button>
                             </div>
@@ -151,8 +151,8 @@ export default class ChecklistItem extends Component {
 
                         <div>
                             <div className={ styles.itemNotes }>
+                                <textarea value={item.notes}></textarea>
                                 <label>Notes</label>
-                                <textarea></textarea>
                             </div>
                         </div>
                         <div className="clearfix">

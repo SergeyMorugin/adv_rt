@@ -67,23 +67,24 @@
     }
   }
 
-  &.hoverPass:hover{
-    background: map-get($foundation-palette, 'pass');
-  }
-  &.hoverBestPractise:hover{
-    background: map-get($foundation-palette, 'bestPractise');
-  }
-  &.hoverPartialComplete:hover{
-    background: map-get($foundation-palette, 'partialComplete');
-  }
-  &.hoverFail:hover{
-    background: map-get($foundation-palette, 'fail');
-  }
-
-  &.hoverPass, &.hoverBestPractise, &.hoverPartialComplete, &.hoverFail{
-    &.hollow:not(.disabled):hover {
-      border-color: transparent !important;
-      color: #FFF;
+  // hollow button with a status modifier must be colored on hover (expect if disabled)
+  &.hollow:not(.disabled){
+    &.hoverPass:hover{
+      border-color: map-get($foundation-palette, 'pass');
+      color: map-get($foundation-palette, 'pass');
+    }
+    &.hoverBestPractise:hover{
+      border-color: map-get($foundation-palette, 'bestPractise');
+      color: map-get($foundation-palette, 'bestPractise');
+    }
+    &.hoverPartialComplete:hover{
+      border-color: map-get($foundation-palette, 'partialComplete');
+      color: map-get($foundation-palette, 'partialComplete');
+    }
+    &.hoverFail:hover{
+      border-color: map-get($foundation-palette, 'fail');
+      color: map-get($foundation-palette, 'fail');
     }
   }
+
 }
