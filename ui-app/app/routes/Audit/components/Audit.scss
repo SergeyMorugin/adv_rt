@@ -19,17 +19,6 @@
   }
 }
 
-.soaDropdownWrapper{
-  display: flex;
-
-  label{
-    color: $color-disabled-grey;
-    margin-right: 10px;
-    font-size: 1rem;
-    font-weight: 300;
-  }
-}
-
 .auditContent{
   position: absolute;
   top: $audit-header-height;

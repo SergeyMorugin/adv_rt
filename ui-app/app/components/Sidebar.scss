@@ -29,8 +29,9 @@ $sb-bg-color: #2D323F;
         padding: 10px 0;
         transition: .4s ease-in-out;
         width: 100%;
-        overflow: hidden;
         white-space: nowrap;
+        position: relative;
+        overflow: hidden;
 
         &:hover{
           background: lighten($sb-bg-color, 10%);

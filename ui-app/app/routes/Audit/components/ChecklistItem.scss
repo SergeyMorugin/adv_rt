@@ -14,6 +14,10 @@
   transition: margin 0.2s, background-color 0.3s, border-left-color 0.3s;
   cursor: pointer;
 
+  // for react-ink (ripple effect)
+  position: relative;
+  overflow: hidden;
+
   &:hover{
     background: #EEE;
   }

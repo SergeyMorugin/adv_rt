@@ -8,94 +8,6 @@ import DocumentDropdown from './DocumentDropdown'
 import Checklist from './Checklist'
 import DocumentBody from './DocumentBody'
 
-const checkListItems = [
-
-    {
-        key: "INC01",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "",
-        status: 'not_applicable',
-        relevantSections: [
-            {doc: 1, section: "section1"},
-            {doc: 1, section: "section2"},
-            {doc: 2, section: "section1"},
-        ]
-    },
-    {
-        key: "INC02",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "Every is right.",
-        status: 'pass',
-        relevantSections: [
-            {doc: 2, section: "section1"},
-        ]
-    },
-    {
-        key: "INC03",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "",
-        status: null,
-        relevantSections: [
-            {doc: 1, section: "section2"}
-        ]
-    },
-    {
-        key: "INC04",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "",
-        status: 'fail',
-        relevantSections: [
-            {doc: 1, section: "section2"},
-            {doc: 1, section: "section1"},
-        ]
-    },
-    {
-        key: "INC05",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "",
-        status: 'best_practise',
-        relevantSections: [
-            {doc: 1, section: "section2"}
-        ]
-    },
-    {
-        key: "INC06",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "",
-        status: 'partial_complete',
-        relevantSections: [
-            {doc: 1, section: "section2"}
-        ]
-    },
-    {
-        key: "INC07",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "",
-        status: 'partial_complete',
-        relevantSections: [
-            {doc: 1, section: "section2"}
-        ]
-    },
-    {
-        key: "INC08",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "",
-        status: null,
-        relevantSections: [
-            {doc: 1, section: "section2"}
-        ]
-    },
-    {
-        key: "INC09",
-        text: "Does the advice document contain a title page clearly stating that it is an SoA?",
-        notes: "",
-        status: 'fail',
-        relevantSections: [
-            {doc: 1, section: "section2"}
-        ]
-    },
-
-];
 
 export default class Audit extends Component {
 
@@ -132,9 +44,9 @@ export default class Audit extends Component {
                 <div className={ styles.audit }>
                     <header>
                         <div className={styles.headerTop}>
-                            <div className={styles.editableAuditName}>
+                            <div className={styles.editableAuditName} onClick={() => {this.auditNameInput.focus()}}>
                                 <input value={audit.name} type="text" ref={(e) => this.auditNameInput = e} />
-                                <i className="fas fa-pencil-alt" onClick={() => {this.auditNameInput.focus()}}></i>
+                                <i className="fas fa-pencil-alt"></i>
                             </div>
 
                             <div className={styles.progress}>
@@ -144,14 +56,13 @@ export default class Audit extends Component {
 
                         <div>
                             <div className={styles.soaDropdownWrapper}>
-                                <label>SOA</label>
-                                    <DocumentDropdown
-                                        documents={audit.documents}
-                                        selectedDocument={this.props.document}
-                                        onDocPick={(docId) => {
-                                            this.props.loadDocument(docId)
-                                        }}
-                                    />
+                                <DocumentDropdown
+                                    documents={audit.documents}
+                                    selectedDocument={this.props.document}
+                                    onDocPick={(docId) => {
+                                        this.props.loadDocument(docId)
+                                    }}
+                                />
                             </div>
                         </div>
 
@@ -164,7 +75,7 @@ export default class Audit extends Component {
                             </div>
                             <div className="column small-5 xlarge-4">
                                 <Checklist
-                                    items={checkListItems}
+                                    items={audit.checklist}
                                     showDocument={(docId, section) => {
                                         if (
                                             this.props.document &&

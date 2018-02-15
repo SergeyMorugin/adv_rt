@@ -11,11 +11,21 @@
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
+  border-radius: 8px;
+  padding: 5px 0;
 
   i{
     font-size: 0.85em;
     color: lighten($color-disabled-grey, 10%);
     margin-left: 8px;
+  }
+
+  label{
+    color: $color-disabled-grey;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: inherit;
   }
 }
 

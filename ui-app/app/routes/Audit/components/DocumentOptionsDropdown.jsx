@@ -7,6 +7,8 @@ import AbstractDropdown from '../../../components/common/AbstractDropdown';
 import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
 import RadioButton from '../../../components/common/RadioButton'
 
+import Ink from 'react-ink'
+
 export default class DocumentOptionsDropdown extends AbstractDropdown {
 
     constructor(props) {
@@ -19,6 +21,7 @@ export default class DocumentOptionsDropdown extends AbstractDropdown {
 
                 <div className={ styles.opener } onClick={this.toggleOpen}>
                     <i className="fas fa-ellipsis-v"/>
+                    <Ink background={false} duration={600}/>
                 </div>
 
                 { this.state.isOpen &&

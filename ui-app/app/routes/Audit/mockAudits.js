@@ -1,4 +1,7 @@
 // TODO remove mockAudit and use server side loading
+
+import checklistMock from './checklistMock';
+
 export default {
 
     2:
@@ -12,6 +15,7 @@ export default {
             clientLocation: "South Yarra",
             progress: '10',
             date: '',
+            checklist: checklistMock(),
 
             documents: [
                 {
@@ -42,6 +46,7 @@ export default {
             clientLocation: "Glen Iris",
             progress: '40',
             date: '',
+            checklist: checklistMock(),
 
             documents: []
         },
@@ -57,6 +62,7 @@ export default {
             clientLocation: "Glen Iris",
             progress: '100',
             date: '',
+            checklist: checklistMock(),
 
             documents: []
         }

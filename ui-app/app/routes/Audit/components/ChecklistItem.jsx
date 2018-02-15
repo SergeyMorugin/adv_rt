@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import styles from './ChecklistItem.scss';
 
+import Ink from 'react-ink'
+
 export default class ChecklistItem extends Component {
 
     constructor(props) {
@@ -28,7 +30,7 @@ export default class ChecklistItem extends Component {
 
     getButtonClass(status, item) {
 
-        let classes = ['expanded', 'button'];
+        let classes = ['expanded', 'button', 'inkable'];
 
         if (item.status == 'not_applicable') {
             classes.push('hollow');
@@ -122,6 +124,11 @@ export default class ChecklistItem extends Component {
                     }
                 }}
             >
+
+                { !this.props.isActive &&
+                    <Ink background={false} opacity={0.1}/> // ripple effect only when item is not active
+                }
+
                 <div>{item.key}</div>
                 <div>
                     <span className="itemText">{item.text}</span>
@@ -129,16 +136,28 @@ export default class ChecklistItem extends Component {
                     <div className={styles.itemDetails}>
                         <div className="row small-up-2 xlarge-up-4">
                             <div className="column">
-                                <button className={this.getButtonClass('fail', item)}>Fail</button>
+                                <button className={this.getButtonClass('fail', item)}>
+                                    Fail
+                                    <Ink opacity={0.1}/>
+                                </button>
                             </div>
                             <div className="column">
-                                <button className={this.getButtonClass('partial_complete', item)}>Partial complete</button>
+                                <button className={this.getButtonClass('partial_complete', item)}>
+                                    Partial complete
+                                    <Ink opacity={0.1}/>
+                                </button>
                             </div>
                             <div className="column">
-                                <button className={this.getButtonClass('pass', item)}>Pass</button>
+                                <button className={this.getButtonClass('pass', item)}>
+                                    Pass
+                                    <Ink opacity={0.1}/>
+                                </button>
                             </div>
                             <div className="column">
-                                <button className={this.getButtonClass('best_practise', item)}>Best Practise</button>
+                                <button className={this.getButtonClass('best_practise', item)}>
+                                    Best Practise
+                                    <Ink opacity={0.1}/>
+                                </button>
                             </div>
                         </div>
 
