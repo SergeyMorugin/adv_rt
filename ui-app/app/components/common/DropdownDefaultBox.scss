@@ -6,6 +6,7 @@ $doc-dd-box-arrow-height: 13px;
 
 .box {
   position: absolute;
+  z-index: 150;
   left: -10px;
   right: -$doc-dd-box-right-offset;
   top: 100%;
