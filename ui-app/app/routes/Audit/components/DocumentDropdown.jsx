@@ -1,54 +1,16 @@
 import React, { Component } from 'react';
-import ReactDom from 'react-dom';
 
 import styles from './DocumentDropdown.scss';
+import AbstractDropdown from '../../../components/common/AbstractDropdown';
+import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
 
-/**
- * Credits: https://github.com/fraserxu/react-dropdown/
- */
-export default class DocumentDropdown extends Component {
+export default class DocumentDropdown extends AbstractDropdown {
 
 
     constructor(props) {
         super(props)
-
-        this.state = {
-            isOpen: false
-        }
-
-        this.mounted = true;
-        this.toggleOpen = this.toggleOpen.bind(this);
-        this.handleDocumentClick = this.handleDocumentClick.bind(this);
     }
 
-    componentDidMount () {
-        document.addEventListener('click', this.handleDocumentClick, false)
-        document.addEventListener('touchend', this.handleDocumentClick, false)
-    }
-
-    componentWillUnmount () {
-        this.mounted = false
-        document.removeEventListener('click', this.handleDocumentClick, false)
-        document.removeEventListener('touchend', this.handleDocumentClick, false)
-    }
-
-
-    toggleOpen() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    }
-
-    handleDocumentClick (event) {
-        // close dropdown on document (html) is click
-        if (this.mounted) {
-            if (!ReactDom.findDOMNode(this).contains(event.target)) {
-                if (this.state.isOpen) {
-                    this.setState({ isOpen: false })
-                }
-            }
-        }
-    }
 
     handleDocumentDdItemClick (doc) {
         // when dropdown item is clicked select doc and close
@@ -93,31 +55,24 @@ export default class DocumentDropdown extends Component {
                 </div>
 
                 { this.state.isOpen &&
-                    (
-                        <div className={ styles.box }>
-                            <div className={ styles.boxArrow }/>
-                            {this.props.documents.map(doc => (
-                                <div
-                                    key={doc.id}
-                                    onClick={() => {this.handleDocumentDdItemClick(doc)}}
-                                >
-
-                                    <div className={ styles.docListItem }>
-                                        <i className={this.getFileIconClass(doc.documentFileType)}></i>
-                                        <div>
-                                            <div className={ styles.documentType }>{doc.documentType}</div>
-                                            <div>{doc.documentTitle}</div>
-                                        </div>
+                    <DropdownDefaultBox larger>
+                        {this.props.documents.map(doc => (
+                            <div
+                                key={doc.id}
+                                onClick={() => {this.handleDocumentDdItemClick(doc)}}
+                            >
+                                <div className={ styles.docListItem }>
+                                    <i className={this.getFileIconClass(doc.documentFileType)}></i>
+                                    <div>
+                                        <div className={ styles.documentType }>{doc.documentType}</div>
+                                        <div>{doc.documentTitle}</div>
                                     </div>
-
                                 </div>
-                            ))}
 
-                            <input type="file" />
-
-                        </div>
-                    )
-
+                            </div>
+                        ))}
+                        <input type="file" />
+                    </DropdownDefaultBox>
                 }
             </div>
         )

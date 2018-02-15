@@ -1,0 +1,33 @@
+$radio-width: 14px;
+
+.radio{
+  border: 1px solid $color-lighter-grey;
+  border-radius: 100%;
+  position: relative;
+  width: $radio-width;
+  height: $radio-width;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:before{
+    display: block;
+    content: '';
+    border-radius: 100%;
+    height: $radio-width - 8px;
+    width: $radio-width - 8px;
+    transition: all 0.25s ease-in-out;
+    transform: scale(0, 0);
+    background: $menu-active-font-color;
+    opacity: 0;
+  }
+
+  &.checked{
+    border-color: $menu-active-font-color;
+
+    &:before{
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}

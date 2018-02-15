@@ -11,4 +11,39 @@
   &:hover{
     color: #a7a7a7;
   }
+
+  i{
+    padding: 0 15px; // padding to enlarge clickable area
+  }
+}
+
+.box{
+  left: auto;
+  width: 300px;
+  margin-right: 15px; // compensate padding set above on `.opener i`
+}
+
+.sizeList{
+  &>li{
+    white-space: nowrap;
+  }
+
+  :global{
+    .font-size-medium{
+      font-size: 1.2em;
+    }
+    .font-size-large{
+      font-size: 1.4em;
+    }
+  }
+
+  &>li>a{
+    display: flex !important;
+    align-items: center;
+
+    :first-child{
+      margin-right: 11px;
+    }
+
+  }
 }

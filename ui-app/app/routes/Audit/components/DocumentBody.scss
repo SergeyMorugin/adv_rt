@@ -19,7 +19,7 @@
     background: #658E15;
     display: block;
     width: 0;
-    box-shadow: -4px 6px 9px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: -2px 3px 2px 0px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -29,6 +29,25 @@
 
 .documentMenu{
   position: absolute;
-  right: 70px;
+  right: 55px;
   top: 5px;
+}
+
+.documentHtml{
+
+  font-size: 18px;
+
+  :global{
+    .font-size-small{
+      font-size: 1em;
+    }
+
+    .font-size-medium{
+      font-size: 1.2em;
+    }
+
+    .font-size-large{
+      font-size: 1.4em;
+    }
+  }
 }

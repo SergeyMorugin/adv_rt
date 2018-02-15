@@ -9,11 +9,18 @@ export default class ChecklistItem extends Component {
 
     constructor(props) {
         super(props)
+
+        this.state = {
+            fontSize: 'small'
+        }
+
+        this.setFontSize = this.setFontSize.bind(this)
     }
 
-    componentDidMount() {
-
-
+    setFontSize(fontSize) {
+        this.setState({
+            fontSize: fontSize
+        })
     }
 
     render() {
@@ -27,11 +34,14 @@ export default class ChecklistItem extends Component {
             return (
                 <div className={ styles.documentWrapper }>
                     <div className={ styles.documentMenu }>
-                        <DocumentOptionsDropdown />
+                        <DocumentOptionsDropdown
+                            fontSize={this.state.fontSize}
+                            setFontSize={this.setFontSize} />
                     </div>
 
-
-                    <div dangerouslySetInnerHTML={{ __html: document.html }} />
+                    <div className={styles.documentHtml}>
+                        <div className={'font-size-' + this.state.fontSize} dangerouslySetInnerHTML={{ __html: document.html }} />
+                    </div>
                 </div>
             );
         } else {
