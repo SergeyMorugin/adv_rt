@@ -1,9 +1,9 @@
 .documentWrapper{
   background: #FFF;
-  padding: 104px 30px 150px 30px;
-  margin: 30px -15px 30px 12px;
-  position: relative;
-
+  padding: 104px 0 0 0;
+  margin:  0 ;
+  position: absolute;
+  top: 30px; right: -15px; bottom: 0; left: 12px;
 
   // folded corner
   // credit: http://nicolasgallagher.com/pure-css-folded-corner-effect/
@@ -23,14 +23,6 @@
   }
 }
 
-@include breakpoint(large) {
-  .documentWrapper {
-    background: #FFF;
-    padding: 104px 100px 150px 120px;
-    margin: 30px;
-  }
-}
-
 .loadingWrapper{
   margin-top: 150px;
 }
@@ -41,9 +33,15 @@
   top: 5px;
 }
 
-.documentHtml{
+.documentHtmlOuter{
 
   font-size: 18px;
+  padding: 0 30px 0 0;
+  overflow: hidden;
+
+  &:hover{
+    overflow: auto;
+  }
 
   :global{
     .font-size-small{
@@ -57,5 +55,25 @@
     .font-size-large{
       font-size: 1.4em;
     }
+  }
+}
+
+.documentHtml{
+  padding-right: 25px;
+  padding-bottom: 80px;
+}
+
+@include breakpoint(large) {
+  .documentWrapper {
+    background: #FFF;
+    padding: 104px 0 0 0;
+    top: 30px; right: 30px; bottom: 0; left: 30px;
+    margin-bottom: 0;
+  }
+
+  .documentHtmlOuter{
+    font-size: 18px;
+    padding: 0 75px 0 100px;
+    height: 100%;
   }
 }

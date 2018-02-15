@@ -69,11 +69,11 @@ export default class Audit extends Component {
                     </header>
 
                     <div className={styles.auditContent}>
-                        <div className="row fullWidth">
-                            <div className="column small-7 xlarge-8">
+                        <div  className="row fullWidth fullHeight">
+                            <div className={ styles.documentBodyWrapper + " column small-7 xlarge-8 fullHeight" } >
                                 <DocumentBody document={this.props.document} />
                             </div>
-                            <div className="column small-5 xlarge-4">
+                            <div className={styles.checkListWrapper + " column small-5 xlarge-4 fullHeight"}>
                                 <Checklist
                                     items={audit.checklist}
                                     showDocument={(docId, section) => {

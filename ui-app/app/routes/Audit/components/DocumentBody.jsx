@@ -5,6 +5,8 @@ import styles from './DocumentBody.scss';
 import Spinner from '../../../components/common/Spinner'
 import DocumentOptionsDropdown from './DocumentOptionsDropdown'
 
+import { Scrollbars } from 'react-custom-scrollbars';
+
 export default class ChecklistItem extends Component {
 
     constructor(props) {
@@ -39,8 +41,17 @@ export default class ChecklistItem extends Component {
                             setFontSize={this.setFontSize} />
                     </div>
 
-                    <div className={styles.documentHtml}>
-                        <div className={'font-size-' + this.state.fontSize} dangerouslySetInnerHTML={{ __html: document.html }} />
+                    <div className={ styles.documentHtmlOuter }>
+                        <Scrollbars
+                            autoHide
+                            autoHideTimeout={1000}
+                            autoHideDuration={200}
+                            style={{ width: "100%", height: "100%" }}>
+                            <div
+                                className={ styles.documentHtml + ' font-size-' + this.state.fontSize }
+                                dangerouslySetInnerHTML={{ __html: document.html }} />
+                        </Scrollbars>
+
                     </div>
                 </div>
             );
