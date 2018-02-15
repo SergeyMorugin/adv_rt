@@ -6,6 +6,7 @@ import Spinner from '../../../components/common/Spinner'
 import Progressbar from '../../../components/common/Progressbar'
 import DocumentDropdown from './DocumentDropdown'
 import Checklist from './Checklist'
+import DocumentBody from './DocumentBody'
 
 const checkListItems = [
 
@@ -159,7 +160,7 @@ export default class Audit extends Component {
                     <div className={styles.auditContent}>
                         <div className="row fullWidth">
                             <div className="column small-8">
-                                {this.renderDocument()}
+                                <DocumentBody document={this.props.document} />
                             </div>
                             <div className="column small-4">
                                 <Checklist
@@ -192,20 +193,6 @@ export default class Audit extends Component {
         }
     }
 
-    renderDocument() {
-
-        if (!this.props.document) {
-            return <div>Select a document</div>
-        } else if (this.props.document.status === 'loading') {
-            return <Spinner/>
-        } else if (this.props.document.status === 'ok') {
-            let document = this.props.document.data;
-            return <div className={ styles.documentWrapper } dangerouslySetInnerHTML={{ __html: document.html }}></div>
-        } else {
-            return <div>Error: {this.props.document.error }</div>
-        }
-
-    }
 
     render() {
         return this.getContent();
