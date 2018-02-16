@@ -1,3 +1,5 @@
+import DopProp from 'dot-prop-immutable'
+
 const initialState = {
     audit: {status: "loading"},
     document: null,
@@ -24,6 +26,11 @@ export default (state = initialState , action) => {
             return {
                 ...state,
                 audit: {status: "error", error: action.error},
+            };
+        case 'AUDIT_PROPERTY_UPDATE':
+            return {
+                ...state,
+                audit: DopProp.set(state.audit, 'data.' + action.property, action.value),
             };
 
         // audit list

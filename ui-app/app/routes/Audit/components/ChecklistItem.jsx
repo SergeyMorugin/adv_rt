@@ -12,8 +12,10 @@ export default class ChecklistItem extends Component {
         this.getItemClass = this.getItemClass.bind(this);
 
         this.state = {
-            activeRelevantSectionIndex: 0
+            activeRelevantSectionIndex: 0,
         }
+
+        this.handleNotesUpdate = this.handleNotesUpdate.bind(this)
     }
 
     componentDidMount() {
@@ -26,6 +28,10 @@ export default class ChecklistItem extends Component {
                 this.props.showDocument(relevantSection.doc, relevantSection.section)
             }
         }
+    }
+
+    handleNotesUpdate(event) {
+        this.props.updateNotes(event.target.value)
     }
 
     getButtonClass(status, item) {
@@ -165,7 +171,7 @@ export default class ChecklistItem extends Component {
 
                         <div>
                             <div className={ styles.itemNotes }>
-                                <textarea value={item.notes}></textarea>
+                                <textarea value={item.notes} onChange={this.handleNotesUpdate}></textarea>
                                 <label>Notes</label>
                             </div>
                         </div>

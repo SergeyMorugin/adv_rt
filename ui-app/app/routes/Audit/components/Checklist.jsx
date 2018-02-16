@@ -36,13 +36,19 @@ export default class Checklist extends Component {
     render() {
         return (
             <ol className={ styles.checklist }>
-                {this.props.items.map((item) => (
+                {this.props.items.map((item, index) => (
                     <ChecklistItem
                         key={item.key}
                         isActive={item.key === this.state.activeItemKey}
                         item={item}
+                        itemIndex={index}
                         setActive={() => {this.activateItem(item.key)}}
                         showDocument={this.props.showDocument}
+                        updateNotes={(newValue) => {
+                            // updates the note as the user is typing
+                            // TODO update on the server
+                            this.props.auditPropertyUpdate(`checklist.${index}.notes`, newValue)
+                        }}
                     />
                 ))}
             </ol>

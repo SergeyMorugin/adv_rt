@@ -76,6 +76,7 @@ export default class Audit extends Component {
                             <div className={styles.checkListWrapper + " column small-5 xlarge-4 fullHeight"}>
                                 <Checklist
                                     items={audit.checklist}
+                                    auditPropertyUpdate={this.props.auditPropertyUpdate}
                                     showDocument={(docId, section) => {
                                         if (
                                             this.props.document &&

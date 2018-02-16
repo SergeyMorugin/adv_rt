@@ -10,6 +10,7 @@ import fetchDocument from '~/actions/fetchDocument'
 import fetchDocumentSuccess from '~/actions/fetchDocumentSuccess'
 import fetchDocumentFail from '~/actions/fetchDocumentFail'
 import goToDocumentSection from '~/actions/goToDocumentSection'
+import auditPropertyUpdate from '~/actions/auditPropertyUpdate'
 
 import mockAudits from './mockAudits'
 import mockDocuments from './mockDocuments'
@@ -57,6 +58,11 @@ export default connect(
         // callback to jump to document section without reloading
         goToDocumentSection: (section)=> {
             dispatch(goToDocumentSection(section));
+        },
+
+        // callback to update a property value
+        auditPropertyUpdate: (property, value)=> {
+            dispatch(auditPropertyUpdate(property, value));
         },
     })
 )(Container)

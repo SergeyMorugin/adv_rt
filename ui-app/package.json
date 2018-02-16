@@ -43,6 +43,7 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "dot-prop-immutable": "^1.4.0",
     "express": "^4.15.2",
     "foundation-sites": "^6.4.4-rc1",
     "history": "^4.7.2",
