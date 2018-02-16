@@ -71,7 +71,6 @@ export default class Audit extends Component {
                                 />
                             </div>
                         </div>
-
                     </header>
 
                     <div className={styles.auditContent}>

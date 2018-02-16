@@ -57,6 +57,12 @@
   height: 100%;
 }
 
+.flexCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .muted{
   color: $color-disabled-grey;

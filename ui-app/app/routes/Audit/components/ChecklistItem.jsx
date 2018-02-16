@@ -19,6 +19,15 @@ export default class ChecklistItem extends Component {
         this.handleNotesUpdate = this.handleNotesUpdate.bind(this)
     }
 
+    componentWillUpdate(nextProps, nextState) {
+
+        // if active section changed, show it
+        if(nextState.activeRelevantSectionIndex != this.state.activeRelevantSectionIndex) {
+            let nextRelevantSection = this.props.item.relevantSections[nextState.activeRelevantSectionIndex];
+            this.props.showDocument(nextRelevantSection.doc, nextRelevantSection.section)
+        }
+    }
+
     componentDidMount() {
 
         // if item is active, load initial document
@@ -140,7 +149,7 @@ export default class ChecklistItem extends Component {
                             <div className="column">
                                 <button
                                     className={this.getButtonClass('fail', item)}
-                                    onClick={() => {this.props.updateStatus('fail')}}>
+                                    onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('fail')}}>
                                     Fail
                                     <Ink opacity={0.1}/>
                                 </button>
@@ -148,7 +157,7 @@ export default class ChecklistItem extends Component {
                             <div className="column">
                                 <button
                                     className={this.getButtonClass('partial_complete', item)}
-                                    onClick={() => {this.props.updateStatus('partial_complete')}}>
+                                    onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('partial_complete')}}>
                                     Partial complete
                                     <Ink opacity={0.1}/>
                                 </button>
@@ -156,7 +165,7 @@ export default class ChecklistItem extends Component {
                             <div className="column">
                                 <button
                                     className={this.getButtonClass('pass', item)}
-                                    onClick={() => {this.props.updateStatus('pass')}}>
+                                    onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('pass')}}>
                                     Pass
                                     <Ink opacity={0.1}/>
                                 </button>
@@ -164,7 +173,7 @@ export default class ChecklistItem extends Component {
                             <div className="column">
                                 <button
                                     className={this.getButtonClass('best_practise', item)}
-                                    onClick={() => {this.props.updateStatus('best_practise')}}>
+                                    onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('best_practise')}}>
                                     Best Practise
                                     <Ink opacity={0.1}/>
                                 </button>
@@ -191,8 +200,16 @@ export default class ChecklistItem extends Component {
                             </div>
                         </div>
                         <div className="clearfix">
-                            <div className="float-right">
-                                Relevant Sections 2/5
+                            <div className={styles.relevantSection + " float-right flexCenter"}>
+                                Relevant Sections
+
+                                <span className={styles.relevantSectionCounter}>
+                                    {this.state.activeRelevantSectionIndex + 1}/{item.relevantSections.length}
+                                </span>
+
+                                {this.renderRelevantSectionDown(item)}
+                                {this.renderRelevantSectionUp(item)}
+
                             </div>
                         </div>
                     </div>
@@ -201,6 +218,47 @@ export default class ChecklistItem extends Component {
                 <Ink background={false} opacity={0.1}/> // ripple effect only when item is not active
                 }
             </li>
+        )
+    }
+
+    renderRelevantSectionUp(item){
+        let isEnd = this.state.activeRelevantSectionIndex >= item.relevantSections.length - 1
+        return (
+            <div
+                className={styles.relevantSectionButton + ( isEnd ? ' disabled' : '')}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    // go to next section
+                    if (this.state.activeRelevantSectionIndex < item.relevantSections.length - 1) {
+                        this.setState({
+                            activeRelevantSectionIndex: this.state.activeRelevantSectionIndex + 1
+                        })
+                    }
+                }}>
+                <i className="fas fa-chevron-up"></i>
+                {!isEnd && <Ink/>}
+            </div>
+        )
+    }
+
+    renderRelevantSectionDown(item){
+        let isEnd = this.state.activeRelevantSectionIndex <= 0;
+        return (
+            <div
+                className={styles.relevantSectionButton + ( isEnd ? ' disabled' : '')}
+                onClick={(e) => {
+                    e.stopPropagation();
+
+                    // go to previous section
+                    if (this.state.activeRelevantSectionIndex > 0) {
+                        this.setState({
+                            activeRelevantSectionIndex: this.state.activeRelevantSectionIndex - 1
+                        })
+                    }
+                }}>
+                <i className="fas fa-chevron-down"></i>
+                {!isEnd && <Ink/>}
+            </div>
         )
     }
 }

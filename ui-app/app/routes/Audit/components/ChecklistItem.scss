@@ -93,6 +93,7 @@
     color: $color-light-grey;
     display: inline-block;
     margin: 5px;
+    font-size: 0.9em;
   }
 }
 
@@ -194,4 +195,42 @@ li.activeItem{
   .itemDetails{
     max-height: 500px;
   }
+}
+
+.relevantSection{
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.relevantSectionButton{
+  background: $header-bg-color;
+  color: #FFF;
+  width: 33px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s;
+
+  &:global{
+    &.disabled{
+      cursor: default;
+      color: $color-lighter-grey;
+      background: lighten($color-lighter-grey, 20%);
+    }
+  }
+
+  &:last-child{
+    margin: 8px 0;
+  }
+}
+
+.relevantSectionCounter{
+  margin: 0 10px;
+  display: inline-block;
+  color: map-get($foundation-palette, primary);
+  font-weight: normal;
 }
