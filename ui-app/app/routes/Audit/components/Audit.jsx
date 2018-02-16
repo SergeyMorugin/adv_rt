@@ -45,7 +45,13 @@ export default class Audit extends Component {
                     <header>
                         <div className={styles.headerTop}>
                             <div className={styles.editableAuditName} onClick={() => {this.auditNameInput.focus()}}>
-                                <input value={audit.name} type="text" ref={(e) => this.auditNameInput = e} />
+                                <input
+                                    value={audit.name}
+                                    type="text"
+                                    onChange={(e) => {
+                                        this.props.auditPropertyUpdate('name', e.target.value)
+                                    }}
+                                    ref={(e) => this.auditNameInput = e} />
                                 <i className="fas fa-pencil-alt"></i>
                             </div>
 
