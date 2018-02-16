@@ -48,6 +48,7 @@ export default (state = initialState , action) => {
             return {
                 ...state,
                 document: {status: "loading"},
+                documentSection: null
             };
         case 'FETCH_DOCUMENT_SUCCESS':
             return {

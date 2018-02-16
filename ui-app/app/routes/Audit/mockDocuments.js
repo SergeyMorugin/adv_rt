@@ -6,7 +6,7 @@ export default {
             id: 1,
             documentType: 'pdf',
             documentTitle: 'Fergusson SOA 020318.pdf',
-            html: `<section sectionName="section1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien diam, iaculis nec ultrices quis, ullamcorper egestas leo. Donec sit amet placerat est. Cras tincidunt sed nunc vel posuere. Morbi vitae mi gravida, aliquam urna quis, scelerisque ligula. Integer lobortis accumsan neque id pharetra. Ut lacinia consectetur quam nec porta. Cras porttitor lacus nec justo commodo tincidunt. Integer accumsan purus sit amet nibh commodo iaculis. Fusce libero lacus, feugiat quis lacinia in, porta at urna. Curabitur in nibh ac eros aliquet ultricies et quis ipsum. Nullam ut orci eros. Etiam at massa consectetur, pulvinar leo sed, semper erat. Etiam quis turpis at arcu condimentum convallis aliquam quis metus. Ut aliquam lacinia erat, vitae eleifend lectus aliquet iaculis. Donec fringilla tempor libero, eget congue lorem consequat a.
+            html: `<section name="section1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien diam, iaculis nec ultrices quis, ullamcorper egestas leo. Donec sit amet placerat est. Cras tincidunt sed nunc vel posuere. Morbi vitae mi gravida, aliquam urna quis, scelerisque ligula. Integer lobortis accumsan neque id pharetra. Ut lacinia consectetur quam nec porta. Cras porttitor lacus nec justo commodo tincidunt. Integer accumsan purus sit amet nibh commodo iaculis. Fusce libero lacus, feugiat quis lacinia in, porta at urna. Curabitur in nibh ac eros aliquet ultricies et quis ipsum. Nullam ut orci eros. Etiam at massa consectetur, pulvinar leo sed, semper erat. Etiam quis turpis at arcu condimentum convallis aliquam quis metus. Ut aliquam lacinia erat, vitae eleifend lectus aliquet iaculis. Donec fringilla tempor libero, eget congue lorem consequat a.
 
 <br/>
 <br/>
@@ -16,7 +16,7 @@ Proin sit amet purus lacus. Integer et elit eu sem gravida iaculis. Mauris sed m
 
 <br/>
 <br/>
-<section sectionName="section2">
+<section name="section2">
 Suspendisse vitae hendrerit sapien. Aliquam molestie quam vel facilisis porttitor. Sed fermentum ultricies dui at vulputate. Proin ac magna sit amet massa lacinia faucibus in id ex. Cras vel malesuada lorem, vel eleifend sem. Vestibulum nec auctor nibh. Curabitur a maximus mauris. Pellentesque justo tellus, efficitur sit amet rhoncus vitae, mattis ut risus. Morbi pretium sem id aliquam cursus. Fusce at nunc quam. Fusce sagittis, lorem quis interdum laoreet, magna sem imperdiet augue, ut cursus ante felis non ante. Fusce vel venenatis libero. Mauris a tortor vel urna ultrices interdum in at neque.
 
 
@@ -36,11 +36,11 @@ Sed sagittis magna tortor, quis dapibus ipsum sollicitudin vitae. Nullam imperdi
             id: 2,
             documentType: 'pdf',
             documentTitle: 'Fergusson SOA 100318.pdf',
-            html: `<b>Document Title</b><br/><section sectionName="section1">Document content comes here</section>
+            html: `<b>Document Title</b><br/><section name="section1">Document content comes here</section>
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 
-<section sectionName="section2">
+<section name="section2">
 Suspendisse vitae hendrerit sapien. Aliquam molestie quam vel facilisis porttitor. Sed fermentum ultricies dui at vulputate. Proin ac magna sit amet massa lacinia faucibus in id ex. Cras vel malesuada lorem, vel eleifend sem. Vestibulum nec auctor nibh. Curabitur a maximus mauris. Pellentesque justo tellus, efficitur sit amet rhoncus vitae, mattis ut risus. Morbi pretium sem id aliquam cursus. Fusce at nunc quam. Fusce sagittis, lorem quis interdum laoreet, magna sem imperdiet augue, ut cursus ante felis non ante. Fusce vel venenatis libero. Mauris a tortor vel urna ultrices interdum in at neque.
 
 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque at ante auctor, facilisis velit nec, facilisis erat. Nunc tincidunt auctor lobortis. Maecenas sit amet dui arcu. Praesent tortor risus, tincidunt eu quam eget, elementum ultrices elit. Maecenas auctor ante a nisl gravida egestas. Curabitur imperdiet nisi sodales sollicitudin lobortis. Donec tristique posuere gravida. Proin blandit vitae ipsum vel rutrum.

@@ -19,6 +19,32 @@ export default class ChecklistItem extends Component {
         this.setFontSize = this.setFontSize.bind(this)
     }
 
+    componentDidUpdate(prevProps) {
+
+        // if section changed, clear previous section, highlight the new one and scroll to it
+        if (this.props.documentSection && prevProps.documentSection !== this.props.documentSection) {
+
+            // clear previously highlighted section
+            let highlightedSection = this.htmlRenderWrapper.querySelectorAll(`[class="current-section"]`)
+            for (let i = 0; i < highlightedSection.length; i++) {
+                highlightedSection[i].classList.remove('current-section');
+            }
+
+            // get new section to scroll to
+            let sectionToScrollTo = this.htmlRenderWrapper.querySelector(`[name=${this.props.documentSection}]`);
+
+            // scroll to and highlight section
+            if (sectionToScrollTo) {
+                sectionToScrollTo.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                sectionToScrollTo.classList.add('current-section');
+            } else {
+                console.warn(`Cannot find section ${this.props.documentSection}.`)
+            }
+        }
+    }
+
     setFontSize(fontSize) {
         this.setState({
             fontSize: fontSize
@@ -46,9 +72,11 @@ export default class ChecklistItem extends Component {
                             autoHide
                             autoHideTimeout={1000}
                             autoHideDuration={200}
+                            ref={(e) => {this.scrollbarInstance = e}}
                             style={{ width: "100%", height: "100%" }}>
                             <div
                                 className={ styles.documentHtml + ' font-size-' + this.state.fontSize }
+                                ref={(e) => {this.htmlRenderWrapper = e}}
                                 dangerouslySetInnerHTML={{ __html: document.html }} />
                         </Scrollbars>
 
