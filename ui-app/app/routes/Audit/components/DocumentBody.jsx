@@ -72,7 +72,6 @@ export default class ChecklistItem extends Component {
                             autoHide
                             autoHideTimeout={1000}
                             autoHideDuration={200}
-                            ref={(e) => {this.scrollbarInstance = e}}
                             style={{ width: "100%", height: "100%" }}>
                             <div
                                 className={ styles.documentHtml + ' font-size-' + this.state.fontSize }

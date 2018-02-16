@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import styles from './ChecklistItem.scss';
 
 import Ink from 'react-ink'
+import Checkbox from '../../../components/common/Checkbox'
 
 export default class ChecklistItem extends Component {
 
@@ -137,25 +138,33 @@ export default class ChecklistItem extends Component {
                     <div className={styles.itemDetails}>
                         <div className="row small-up-2 xlarge-up-4">
                             <div className="column">
-                                <button className={this.getButtonClass('fail', item)}>
+                                <button
+                                    className={this.getButtonClass('fail', item)}
+                                    onClick={() => {this.props.updateStatus('fail')}}>
                                     Fail
                                     <Ink opacity={0.1}/>
                                 </button>
                             </div>
                             <div className="column">
-                                <button className={this.getButtonClass('partial_complete', item)}>
+                                <button
+                                    className={this.getButtonClass('partial_complete', item)}
+                                    onClick={() => {this.props.updateStatus('partial_complete')}}>
                                     Partial complete
                                     <Ink opacity={0.1}/>
                                 </button>
                             </div>
                             <div className="column">
-                                <button className={this.getButtonClass('pass', item)}>
+                                <button
+                                    className={this.getButtonClass('pass', item)}
+                                    onClick={() => {this.props.updateStatus('pass')}}>
                                     Pass
                                     <Ink opacity={0.1}/>
                                 </button>
                             </div>
                             <div className="column">
-                                <button className={this.getButtonClass('best_practise', item)}>
+                                <button
+                                    className={this.getButtonClass('best_practise', item)}
+                                    onClick={() => {this.props.updateStatus('best_practise')}}>
                                     Best Practise
                                     <Ink opacity={0.1}/>
                                 </button>
@@ -163,10 +172,16 @@ export default class ChecklistItem extends Component {
                         </div>
 
                         <div className="clearfix">
-                            <label className="float-right">
-                                Not Applicable
-                                <input type="checkbox" defaultChecked={item.status == 'not_applicable'} />
-                            </label>
+                            <div className={ styles.notApplicableLabel + " float-right"}>
+                                <Checkbox
+                                    checked={item.status == 'not_applicable'}
+                                    onChange={(event) => {
+                                        this.props.updateStatus(event.target.checked ? 'not_applicable' : null);
+                                    }}
+                                >
+                                    <span>Not Applicable</span>
+                                </Checkbox>
+                            </div>
                         </div>
 
                         <div>

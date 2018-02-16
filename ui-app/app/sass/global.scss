@@ -69,7 +69,7 @@
   &.partialComplete, &.pass{
     color: #FFF;
 
-    &:hover, &:active, &:active{
+    &:hover, &:active, &:focus{
       color: #FFF;
     }
   }

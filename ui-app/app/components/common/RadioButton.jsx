@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './RadioButton.scss'
 
-export default class DropdownDefaultBox extends Component {
+export default class RadioButton extends Component {
 
     render() {
         return (

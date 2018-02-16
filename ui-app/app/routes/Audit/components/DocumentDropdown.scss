@@ -16,12 +16,12 @@
 
   i{
     font-size: 0.85em;
-    color: lighten($color-disabled-grey, 10%);
+    color: $color-lighter-grey;
     margin-left: 8px;
   }
 
   label{
-    color: $color-disabled-grey;
+    color: $color-light-grey;
     margin-right: 10px;
     font-size: 1rem;
     font-weight: 300;
@@ -42,12 +42,12 @@
   &>i{
     font-size: 37px;
     margin-right: 12px;
-    color: $color-disabled-grey;
+    color: $color-light-grey;
   }
 }
 
 .documentType{
   font-size: 0.7em;
-  color: $color-disabled-grey;
+  color: $color-light-grey;
   font-weight: 300;
 }

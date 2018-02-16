@@ -49,6 +49,11 @@ export default class Checklist extends Component {
                             // TODO update on the server
                             this.props.auditPropertyUpdate(`checklist.${index}.notes`, newValue)
                         }}
+                        updateStatus={(newValue) => {
+                            // updates the status
+                            // TODO update on the server
+                            this.props.auditPropertyUpdate(`checklist.${index}.status`, newValue)
+                        }}
                     />
                 ))}
             </ol>
