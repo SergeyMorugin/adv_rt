@@ -6,6 +6,7 @@ import Spinner from '../../../components/common/Spinner'
 import Progressbar from '../../../components/common/Progressbar'
 import DocumentDropdown from './DocumentDropdown'
 import ChecklistCatDropdown from './ChecklistCatDropdown'
+import FilterDropdown from './FilterDropdown'
 import Checklist from './Checklist'
 import DocumentBody from './DocumentBody'
 
@@ -17,7 +18,8 @@ export default class Audit extends Component {
         super(props)
 
         this.state = {
-            checklistCategory: null
+            checklistCategory: null,
+            checklistFilters: [],
         }
     }
 
@@ -82,6 +84,29 @@ export default class Audit extends Component {
                                         this.setState({
                                             checklistCategory: cat
                                         })
+                                    }}
+                                />
+                            </div>
+                            <div>
+                                <FilterDropdown
+                                    activeFilters={this.state.checklistFilters}
+                                    setFilter={(filterName, active) => {
+                                        if (active) {
+                                            if(this.state.checklistFilters.indexOf(filterName) < 0) {
+                                                this.state.checklistFilters.push(filterName)
+                                                this.setState({
+                                                    checklistFilters: this.state.checklistFilters
+                                                })
+                                            }
+                                        } else {
+                                            let index = this.state.checklistFilters.indexOf(filterName);
+                                            if (index >= 0) {
+                                                this.state.checklistFilters.splice(index, 1);
+                                                this.setState({
+                                                    checklistFilters: this.state.checklistFilters
+                                                })
+                                            }
+                                        }
                                     }}
                                 />
                             </div>

@@ -46,10 +46,14 @@ export default class Checkbox extends Component {
     render() {
         return (
             <label className={styles.labelCheckbox}>
-                {this.props.children}
+
+                { !this.props.beforeLabel && this.props.children }
                 <input type="checkbox" checked={this.props.checked} onChange={(e) => {
                     this.addRipple();
-                    this.props.onChange(e)
+
+                    if (this.props.onChange) {
+                        this.props.onChange(e)
+                    }
                 }}/>
                 <div ref={(e) => this.checkboxMock = e}>
                     {this.state.ripples.map((key) => {
@@ -70,6 +74,7 @@ export default class Checkbox extends Component {
                         />
                     })}
                 </div>
+                { this.props.beforeLabel && this.props.children }
             </label>
         )
     }
