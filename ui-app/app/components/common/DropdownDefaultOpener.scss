@@ -1,0 +1,23 @@
+.opener{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 5px 0;
+
+  i{
+    font-size: 0.85em;
+    color: $color-lighter-grey;
+    margin-left: 8px;
+  }
+
+  label{
+    color: $color-light-grey;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: inherit;
+  }
+}

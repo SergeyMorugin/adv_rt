@@ -220,6 +220,7 @@ li.activeItem{
       cursor: default;
       color: $color-lighter-grey;
       background: lighten($color-lighter-grey, 20%);
+      opacity: 0.8;
     }
   }
 

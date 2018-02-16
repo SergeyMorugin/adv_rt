@@ -1,25 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import styles from './DocumentDropdown.scss';
 import AbstractDropdown from '../../../components/common/AbstractDropdown';
 import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
-
-import Ink from 'react-ink'
+import DropdownDefaultOpener from '../../../components/common/DropdownDefaultOpener';
 
 export default class DocumentDropdown extends AbstractDropdown {
-
 
     constructor(props) {
         super(props)
     }
 
-
     handleDocumentDdItemClick (doc) {
         // when dropdown item is clicked select doc and close
         this.props.onDocPick(doc.id);
-        this.setState({
-            isOpen: false
-        })
+        this.close()
     }
 
     getDocumentName() {
@@ -50,16 +45,10 @@ export default class DocumentDropdown extends AbstractDropdown {
         return (
             <div className={ styles.docDd }>
 
-                <div className={ styles.opener } onClick={this.toggleOpen}>
-
+                <DropdownDefaultOpener onClick={this.toggleOpen}>
                     <label>SOA</label>
-
                     { this.getDocumentName() }
-
-                    <i className="fas fa-chevron-down"></i>
-
-                    <Ink background={false} radius={180} duration={600} opacity={0.1}/>
-                </div>
+                </DropdownDefaultOpener>
 
                 { this.state.isOpen &&
                     <DropdownDefaultBox larger>

@@ -5,6 +5,7 @@ import styles from './Audit.scss';
 import Spinner from '../../../components/common/Spinner'
 import Progressbar from '../../../components/common/Progressbar'
 import DocumentDropdown from './DocumentDropdown'
+import ChecklistCatDropdown from './ChecklistCatDropdown'
 import Checklist from './Checklist'
 import DocumentBody from './DocumentBody'
 
@@ -14,6 +15,10 @@ export default class Audit extends Component {
 
     constructor(props) {
         super(props)
+
+        this.state = {
+            checklistCategory: null
+        }
     }
 
     componentDidMount() {
@@ -60,8 +65,8 @@ export default class Audit extends Component {
                             </div>
                         </div>
 
-                        <div>
-                            <div className={styles.soaDropdownWrapper}>
+                        <div className={styles.headerBottom}>
+                            <div>
                                 <DocumentDropdown
                                     documents={audit.documents}
                                     selectedDocument={this.props.document}
@@ -70,7 +75,19 @@ export default class Audit extends Component {
                                     }}
                                 />
                             </div>
+                            <div>
+                                <ChecklistCatDropdown
+                                    category={this.state.checklistCategory}
+                                    onCatPick={(cat) => {
+                                        this.setState({
+                                            checklistCategory: cat
+                                        })
+                                    }}
+                                />
+                            </div>
                         </div>
+
+
                     </header>
 
                     <div className={styles.auditContent}>
