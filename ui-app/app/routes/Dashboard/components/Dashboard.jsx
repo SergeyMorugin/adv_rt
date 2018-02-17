@@ -23,7 +23,7 @@ export default class Dashboard extends Component {
                             <div className="row">
                                 <div className="column small-6">
                                     <Widget title="Audits">
-                                        <div className="row small-up-4">
+                                        <div className="row small-up-4" style={{margin: "0 20px"}}>
                                             <div className="column">
                                                 <SingleMetric title="Completed" value="54" />
                                             </div>
