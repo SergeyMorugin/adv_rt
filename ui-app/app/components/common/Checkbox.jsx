@@ -55,7 +55,7 @@ export default class Checkbox extends Component {
                         this.props.onChange(e)
                     }
                 }}/>
-                <div ref={(e) => this.checkboxMock = e}>
+                <div className={this.props.color}>
                     {this.state.ripples.map((key) => {
                         return <Ripple
                             key={key}

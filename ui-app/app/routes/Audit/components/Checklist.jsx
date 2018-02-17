@@ -34,9 +34,19 @@ export default class Checklist extends Component {
     }
 
     render() {
+
+        let items = this.props.items;
+
+        if (this.props.activeFilters.length > 0) {
+            items = items.filter((item) => {
+                let status = item.status || 'none';
+                return this.props.activeFilters.indexOf(status) >= 0;
+            });
+        }
+
         return (
             <ol className={ styles.checklist }>
-                {this.props.items.map((item, index) => (
+                {items.map((item, index) => (
                     <ChecklistItem
                         key={item.key}
                         isActive={item.key === this.state.activeItemKey}

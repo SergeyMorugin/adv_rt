@@ -1,7 +1,7 @@
 @include foundation-global-styles;
 @include foundation-grid;
 //@include foundation-flex-grid;
-//@include foundation-flex-classes;
+@include foundation-flex-classes;
 
 //@include foundation-typography;
 // bug with typography helper, so that we import those manually and exclude the helper:
@@ -63,6 +63,12 @@
   align-items: center;
 }
 
+.flexJustifySpaceBetween{
+  justify-content: space-between;
+}
+.flexAlignCenter{
+  align-items: center;
+}
 
 .muted{
   color: $color-disabled-grey;

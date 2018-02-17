@@ -1,4 +1,32 @@
+.dropdown{
+  position: relative;
+}
+
 .box{
   left: auto;
   width: 300px;
+  margin-right: 4px;
+}
+
+.listItem{
+
+  padding: 0 !important;
+
+  label{
+    padding: 15px 23px;
+    width:100%;
+    height:100%;
+    color: $color-lighter-grey;
+    &>div{
+      margin-right: 10px;
+    }
+  }
+}
+
+.opener{
+  color: $color-lighter-grey;
+}
+
+.openerActive{
+  color: map-get($foundation-palette, primary)
 }

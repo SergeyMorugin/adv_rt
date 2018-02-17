@@ -35,7 +35,7 @@ export default class ChecklistCatDropdown extends AbstractDropdown {
             <div className={ styles.docDd }>
 
                 <DropdownDefaultOpener onClick={this.toggleOpen}>
-                    <span style={{display: 'inline-block', minWidth: 160}}>{this.props.category && categories[this.props.category]}</span>
+                    <span style={{display: 'inline-block'}}>{this.props.category && categories[this.props.category]}</span>
                 </DropdownDefaultOpener>
 
                 { this.state.isOpen &&

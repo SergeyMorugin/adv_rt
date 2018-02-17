@@ -1,3 +1,5 @@
+$green: #88C925;
+
 .labelCheckbox {
   position: relative;
   cursor: pointer;
@@ -68,6 +70,15 @@
         transform: scale(0, 0);
         transition: all .2s ease-in-out;
       }
+
+      &:global{
+        &.green{
+          &:after{
+            background: $green;
+          }
+        }
+      }
+
     }
 
     &:checked+div{
@@ -78,6 +89,13 @@
       &:after{
         transform: scale(1, 1);
       }
+
+      &:global{
+        &.green{
+            border-color: $green;
+        }
+      }
+
     }
   }
 

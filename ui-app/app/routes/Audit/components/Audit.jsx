@@ -19,7 +19,7 @@ export default class Audit extends Component {
 
         this.state = {
             checklistCategory: null,
-            checklistFilters: [],
+            checklistFilters: []
         }
     }
 
@@ -67,8 +67,8 @@ export default class Audit extends Component {
                             </div>
                         </div>
 
-                        <div className={styles.headerBottom}>
-                            <div>
+                        <div  className="row fullWidth collapse">
+                            <div className="column small-7 xlarge-8">
                                 <DocumentDropdown
                                     documents={audit.documents}
                                     selectedDocument={this.props.document}
@@ -77,38 +77,43 @@ export default class Audit extends Component {
                                     }}
                                 />
                             </div>
-                            <div>
-                                <ChecklistCatDropdown
-                                    category={this.state.checklistCategory}
-                                    onCatPick={(cat) => {
-                                        this.setState({
-                                            checklistCategory: cat
-                                        })
-                                    }}
-                                />
-                            </div>
-                            <div>
-                                <FilterDropdown
-                                    activeFilters={this.state.checklistFilters}
-                                    setFilter={(filterName, active) => {
-                                        if (active) {
-                                            if(this.state.checklistFilters.indexOf(filterName) < 0) {
-                                                this.state.checklistFilters.push(filterName)
+                            <div className="column small-5 xlarge-4">
+                                <div className="flex-container flexJustifySpaceBetween flexAlignCenter">
+                                    <div>
+                                        <ChecklistCatDropdown
+                                            category={this.state.checklistCategory}
+                                            onCatPick={(cat) => {
                                                 this.setState({
-                                                    checklistFilters: this.state.checklistFilters
+                                                    checklistCategory: cat
                                                 })
-                                            }
-                                        } else {
-                                            let index = this.state.checklistFilters.indexOf(filterName);
-                                            if (index >= 0) {
-                                                this.state.checklistFilters.splice(index, 1);
-                                                this.setState({
-                                                    checklistFilters: this.state.checklistFilters
-                                                })
-                                            }
-                                        }
-                                    }}
-                                />
+                                            }}
+                                        />
+                                    </div>
+                                    <div>
+                                        <FilterDropdown
+                                            checklist={audit.checklist}
+                                            activeFilters={this.state.checklistFilters}
+                                            setFilter={(filterName, active) => {
+                                                if (active) {
+                                                    if(this.state.checklistFilters.indexOf(filterName) < 0) {
+                                                        this.state.checklistFilters.push(filterName)
+                                                        this.setState({
+                                                            checklistFilters: this.state.checklistFilters
+                                                        })
+                                                    }
+                                                } else {
+                                                    let index = this.state.checklistFilters.indexOf(filterName);
+                                                    if (index >= 0) {
+                                                        this.state.checklistFilters.splice(index, 1);
+                                                        this.setState({
+                                                            checklistFilters: this.state.checklistFilters
+                                                        })
+                                                    }
+                                                }
+                                            }}
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -123,6 +128,7 @@ export default class Audit extends Component {
                             <div className={styles.checkListWrapper + " column small-5 xlarge-4 fullHeight"}>
                                 <Checklist
                                     items={audit.checklist}
+                                    activeFilters={this.state.checklistFilters}
                                     auditPropertyUpdate={this.props.auditPropertyUpdate}
                                     showDocument={(docId, section) => {
                                         if (
