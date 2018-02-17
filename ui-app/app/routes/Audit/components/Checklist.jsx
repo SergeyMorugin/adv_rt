@@ -4,6 +4,15 @@ import styles from './Checklist.scss';
 
 import ChecklistItem from './ChecklistItem'
 
+const statusSeverities = {
+    'none': 1,
+    'fail': 2,
+    'partial_complete': 3,
+    'pass': 4,
+    'best_practise': 5,
+    'not_applicable': 6,
+}
+
 export default class Checklist extends Component {
 
     constructor(props) {
@@ -41,6 +50,14 @@ export default class Checklist extends Component {
             items = items.filter((item) => {
                 let status = item.status || 'none';
                 return this.props.activeFilters.indexOf(status) >= 0;
+            });
+        }
+
+        if (this.props.checklistOrder) {
+            items = items.map((item) => {return item;});
+            items.sort((a, b) => {
+                let diff = statusSeverities[a.status || 'none'] - statusSeverities[b.status || 'none'];
+                return diff * (this.props.checklistOrder == 'asc' ? 1 : -1);
             });
         }
 

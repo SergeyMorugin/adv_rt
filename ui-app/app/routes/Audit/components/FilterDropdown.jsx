@@ -8,6 +8,8 @@ import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
 
 import Checkbox from '../../../components/common/Checkbox'
 
+import Ink from 'react-ink'
+
 const statusList = {
     'pass': 'Pass',
     'partial_complete': 'Partial Complete',
@@ -42,6 +44,7 @@ export default class FilterDropdown extends AbstractDropdown {
 
                 <div className={this.props.activeFilters.length > 0 ? styles.openerActive : styles.opener } onClick={this.toggleOpen}>
                     <i className="fas fa-filter"></i>
+                    <Ink/>
                 </div>
 
                 { this.state.isOpen &&

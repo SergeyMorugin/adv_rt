@@ -11,7 +11,7 @@ const categories = {
     'sdi': 'Standard Document Inclusion',
     'qoa': 'Quality of Advice',
     'ca': 'Centrelink Advice',
-    'gti': 'Geating to Invest',
+    'gti': 'Gearing to Invest',
     'product': 'Product',
     'pri': 'Personal Risk Insurance',
     'ss': 'Super Switching',
@@ -41,6 +41,7 @@ export default class ChecklistCatDropdown extends AbstractDropdown {
                 { this.state.isOpen &&
                 <DropdownDefaultBox className={styles.box}>
                     <ul className={ddListStyles.list}>
+                        <li className={ddListStyles.headingItem}>Checklist Categories</li>
                         {Object.keys(categories).map(cat => (
                             <li key={cat} className={this.props.category == cat ? 'active' : ''}>
                                 <a onClick={() => {this.handleDocumentDdItemClick(cat)}}>{categories[cat]}</a>

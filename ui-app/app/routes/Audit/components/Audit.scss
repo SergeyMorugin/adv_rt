@@ -102,3 +102,20 @@
 .documentBodyWrapper{
   position: relative;
 }
+
+.checklistOrder{
+  margin: 0 15px 0 10px;
+  padding: 0 10px;
+  border-radius: 100%;
+  position: relative;
+
+  i{
+    color: $color-lighter-grey;
+  }
+
+  :global{
+    .active{
+      color: map-get($foundation-palette, primary)
+    }
+  }
+}
