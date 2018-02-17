@@ -19,7 +19,7 @@ module.exports = ({ base }) => {
         devtool: isProd ? false : 'eval-source-map',
 
         entry: isClient
-            ? {sassbase: path.join(__dirname, './app/index.scss'),  index: path.join(__dirname, './app/index.jsx'), vendor: ['react', 'react-dom'] }
+            ? { index: path.join(__dirname, './app/index.jsx'), sassbase: path.join(__dirname, './app/index.scss'),  vendor: ['react', 'react-dom'] }
             : { server: path.join(__dirname, 'server.js') },
 
         output: {

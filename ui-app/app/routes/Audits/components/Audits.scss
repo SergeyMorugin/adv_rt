@@ -3,6 +3,14 @@
 
     display: flex;
 
+    &>*{
+      margin-right: 10px;
+    }
+
+    &>:first-child{
+      margin-right: 80px;
+    }
+
     h1 {
       color: #666;
       font-size: 30px;
@@ -10,6 +18,33 @@
   }
 }
 
+.table{
+
+  &:global.ReactTable{
+    border: 0;
+    font-weight: 300;
+  }
+
+  :global{
+    .rt-thead{
+      .rt-tr .rt-th{
+        border:0;
+        border-bottom: 1px solid $color-lighter-grey;
+        color: $color-light-grey;
+        text-align: left;
+        font-size: 0.9em;
+      }
+    }
+
+    .rt-tbody .rt-tr{
+      background: #F0F1F2;
+
+      &:hover{
+        background: #f7f8f9;
+      }
+    }
+  }
+}
 
 .tableRow{
   cursor: pointer;

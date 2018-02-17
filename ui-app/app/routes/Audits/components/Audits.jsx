@@ -64,7 +64,7 @@ export default class Audits extends Component {
                     <div>
                         <ReactTable
 
-                            className="-highlight"
+                            className={styles.table}
                             data={auditList}
                             columns={columns}
                             defaultPageSize={auditList.length}
