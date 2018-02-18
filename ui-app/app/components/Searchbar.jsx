@@ -25,7 +25,8 @@ export default class Searchbar extends React.Component {
 
     handleClear() {
         this.setState({
-            suggestions: []
+            suggestions: [],
+            hasContent: this.searchbar.querySelector('input[type="text"]').value.length > 0
         });
     }
 
@@ -59,11 +60,12 @@ export default class Searchbar extends React.Component {
 
     render() {
         return (
-            <div className={styles.searchbar + (this.state.hasContent ? ' active' : '')}>
+            <div className={styles.searchbarWrapper + (this.state.hasContent ? ' active' : '')}
+                ref={(e) => (this.searchbar = e)}>
+
                 <SearchBar
                     autoFocus={false}
-                    renderClearButton={true}
-                    renderSearchButton={false}
+                    renderClearButton
                     placeholder="Search"
                     onChange={this.handleChange}
                     onClear={this.handleClear}
@@ -71,11 +73,10 @@ export default class Searchbar extends React.Component {
                     onSearch={this.handleSearch}
                     suggestions={this.state.suggestions}
                     suggestionRenderer={this.suggestionRenderer}
-                    styles={{}}
+                    styles={styles}
                 />
 
                 <i className="fas fa-search"></i>
-
 
             </div>
         )
