@@ -31,14 +31,14 @@ export default class Sidebar extends React.Component {
                     <li>
 
                         <NavLink exact to="/audits" activeClassName={ styles.activeMenu }>
-                            <span className={styles.menuIcon}><i className="fa fa-tachometer-alt"></i></span>
+                            <span className={styles.menuIcon}><i className="fas fa-file-alt"></i></span>
                             Audits
                             <Ink/>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink exact to="/advisers" activeClassName={ styles.activeMenu }>
-                            <span className={styles.menuIcon}><i className="fa fa-tachometer-alt"></i></span>
+                            <span className={styles.menuIcon}><i className="fas fa-user"></i></span>
                             Advisers
                             <Ink/>
                         </NavLink>
