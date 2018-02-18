@@ -51,6 +51,7 @@
     "react": "^15.5.3",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^15.5.3",
+    "react-dropzone": "^4.2.8",
     "react-ink": "^6.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.0.0",

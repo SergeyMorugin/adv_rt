@@ -29,3 +29,27 @@
   color: $color-light-grey;
   font-weight: 300;
 }
+
+.addFile{
+  color: $color-lighter-grey;
+  border: 2px dashed $color-lighter-grey;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 7px 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+
+  &:hover{
+    background: #EEE;
+  }
+
+  span{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 1.5em;
+  }
+}

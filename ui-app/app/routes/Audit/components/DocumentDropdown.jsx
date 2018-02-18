@@ -5,6 +5,8 @@ import AbstractDropdown from '../../../components/common/AbstractDropdown';
 import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
 import DropdownDefaultOpener from '../../../components/common/DropdownDefaultOpener';
 
+import Ink from 'react-ink'
+
 export default class DocumentDropdown extends AbstractDropdown {
 
     constructor(props) {
@@ -67,7 +69,12 @@ export default class DocumentDropdown extends AbstractDropdown {
 
                             </div>
                         ))}
-                        <input type="file" />
+                        <label className={styles.addFile}>
+                            <i className="fas fa-plus"></i>
+                            <span>Add another file</span>
+                            <input type="file" id="docDdFile" style={{display: "none"}} />
+                            <Ink/>
+                        </label>
                     </DropdownDefaultBox>
                 }
             </div>
