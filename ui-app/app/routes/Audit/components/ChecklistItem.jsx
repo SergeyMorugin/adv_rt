@@ -144,83 +144,85 @@ export default class ChecklistItem extends Component {
                     }
                 }}
             >
-                <div>{item.key}</div>
-                <div>
-                    <span className={styles.itemText}>{item.text}</span>
+                <div className={ styles.innerWrapper }>
+                    <div>{item.key}</div>
+                    <div>
+                        <span className={styles.itemText}>{item.text}</span>
 
-                    <div className={styles.itemDetails}>
-                        <div className="row small-up-2 xlarge-up-4">
-                            <div className="column">
-                                <button
-                                    className={this.getButtonClass('fail', item)}
-                                    onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('fail')}}>
-                                    Fail
-                                    <Ink opacity={0.1}/>
-                                </button>
+                        <div className={styles.itemDetails}>
+                            <div className="row small-up-2 xlarge-up-4">
+                                <div className="column">
+                                    <button
+                                        className={this.getButtonClass('fail', item)}
+                                        onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('fail')}}>
+                                        Fail
+                                        <Ink opacity={0.1}/>
+                                    </button>
+                                </div>
+                                <div className="column">
+                                    <button
+                                        className={this.getButtonClass('partial_complete', item)}
+                                        onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('partial_complete')}}>
+                                        Partial complete
+                                        <Ink opacity={0.1}/>
+                                    </button>
+                                </div>
+                                <div className="column">
+                                    <button
+                                        className={this.getButtonClass('pass', item)}
+                                        onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('pass')}}>
+                                        Pass
+                                        <Ink opacity={0.1}/>
+                                    </button>
+                                </div>
+                                <div className="column">
+                                    <button
+                                        className={this.getButtonClass('best_practise', item)}
+                                        onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('best_practise')}}>
+                                        Best Practise
+                                        <Ink opacity={0.1}/>
+                                    </button>
+                                </div>
                             </div>
-                            <div className="column">
-                                <button
-                                    className={this.getButtonClass('partial_complete', item)}
-                                    onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('partial_complete')}}>
-                                    Partial complete
-                                    <Ink opacity={0.1}/>
-                                </button>
-                            </div>
-                            <div className="column">
-                                <button
-                                    className={this.getButtonClass('pass', item)}
-                                    onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('pass')}}>
-                                    Pass
-                                    <Ink opacity={0.1}/>
-                                </button>
-                            </div>
-                            <div className="column">
-                                <button
-                                    className={this.getButtonClass('best_practise', item)}
-                                    onClick={() => {item.status != 'not_applicable' && this.props.updateStatus('best_practise')}}>
-                                    Best Practise
-                                    <Ink opacity={0.1}/>
-                                </button>
-                            </div>
-                        </div>
 
-                        <div className="clearfix">
-                            <div className={ styles.notApplicableLabel + " float-right"}>
-                                <Checkbox
-                                    checked={item.status == 'not_applicable'}
-                                    onChange={(event) => {
-                                        this.props.updateStatus(event.target.checked ? 'not_applicable' : null);
-                                    }}
-                                >
-                                    <span>Not Applicable</span>
-                                </Checkbox>
+                            <div className="clearfix">
+                                <div className={ styles.notApplicableLabel + " float-right"}>
+                                    <Checkbox
+                                        checked={item.status == 'not_applicable'}
+                                        onChange={(event) => {
+                                            this.props.updateStatus(event.target.checked ? 'not_applicable' : null);
+                                        }}
+                                    >
+                                        <span>Not Applicable</span>
+                                    </Checkbox>
+                                </div>
                             </div>
-                        </div>
 
-                        <div>
-                            <div className={ styles.itemNotes }>
-                                <textarea value={item.notes} onChange={this.handleNotesUpdate}></textarea>
-                                <label>Notes</label>
+                            <div>
+                                <div className={ styles.itemNotes }>
+                                    <textarea value={item.notes} onChange={this.handleNotesUpdate}></textarea>
+                                    <label>Notes</label>
+                                </div>
                             </div>
-                        </div>
-                        <div className="clearfix">
-                            <div className={styles.relevantSection + " float-right flexCenter"}>
-                                Relevant Sections
+                            <div className="clearfix">
+                                <div className={styles.relevantSection + " float-right flexCenter"}>
+                                    Relevant Sections
 
-                                <span className={styles.relevantSectionCounter}>
-                                    {this.state.activeRelevantSectionIndex + 1}/{item.relevantSections.length}
-                                </span>
+                                    <span className={styles.relevantSectionCounter}>
+                                        {this.state.activeRelevantSectionIndex + 1}/{item.relevantSections.length}
+                                    </span>
 
-                                {this.renderRelevantSectionDown(item)}
-                                {this.renderRelevantSectionUp(item)}
+                                    {this.renderRelevantSectionDown(item)}
+                                    {this.renderRelevantSectionUp(item)}
 
+                                </div>
                             </div>
                         </div>
                     </div>
+                    { !this.props.isActive &&
+                    <Ink background={false} opacity={0.1}/> // ripple effect only when item is not active
+                    }
                 </div>
-                { !this.props.isActive &&
-                <Ink background={false} opacity={0.1}/> // ripple effect only when item is not active
-                }
             </li>
         )
     }
