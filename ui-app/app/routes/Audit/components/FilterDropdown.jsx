@@ -11,12 +11,12 @@ import Checkbox from '../../../components/common/Checkbox'
 import Ink from 'react-ink'
 
 const statusList = {
+    'none': 'Needs Attention',
+    'best_practise': 'Best Practise',
     'pass': 'Pass',
     'partial_complete': 'Partial Complete',
     'fail': 'Fail',
-    'best_practise': 'Best Practise',
     'not_applicable': 'Not Applicable',
-    'none': 'none',
 }
 
 export default class FilterDropdown extends AbstractDropdown {
@@ -50,7 +50,7 @@ export default class FilterDropdown extends AbstractDropdown {
                 { this.state.isOpen &&
                 <DropdownDefaultBox className={styles.box}>
                     <ul className={ddListStyles.list}>
-                        {Object.keys(menuItems).map(status => {
+                        {Object.keys(statusList).map(status => {
                             return (
                                 <li key={status}>
                                     <a className={ styles.listItem }>
@@ -62,7 +62,7 @@ export default class FilterDropdown extends AbstractDropdown {
                                                 this.props.setFilter(status, e.target.checked)
                                             }}
                                         >
-                                            {statusList[status]}&nbsp;<small>({menuItems[status]})</small>
+                                            {statusList[status]}&nbsp;<small>({menuItems[status] || 0})</small>
                                         </Checkbox>
                                     </a>
                                 </li>

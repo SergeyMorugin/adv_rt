@@ -96,6 +96,10 @@ export default class ChecklistItem extends Component {
 
         let classes = [styles.item];
 
+        if (item.category) {
+            classes.push('category--' + item.category)
+        }
+
         if(this.props.isActive) {
             classes.push(styles.activeItem)
         }

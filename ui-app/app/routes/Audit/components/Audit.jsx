@@ -21,7 +21,7 @@ export default class Audit extends Component {
         super(props)
 
         this.state = {
-            checklistCategory: null,
+            checklistCategory: 'INC',
             checklistFilters: [],
             checklistOrder: null,
             accept: '',
@@ -197,6 +197,7 @@ export default class Audit extends Component {
                                 <div className={styles.checkListWrapper + " column small-5 xlarge-4 fullHeight"}>
                                     <Checklist
                                         items={audit.checklist}
+                                        category={this.state.checklistCategory}
                                         activeFilters={this.state.checklistFilters}
                                         checklistOrder={this.state.checklistOrder}
                                         auditPropertyUpdate={this.props.auditPropertyUpdate}

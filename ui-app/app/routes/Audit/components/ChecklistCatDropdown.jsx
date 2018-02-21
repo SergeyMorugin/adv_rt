@@ -8,14 +8,14 @@ import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
 import DropdownDefaultOpener from '../../../components/common/DropdownDefaultOpener';
 
 const categories = {
-    'sdi': 'Standard Document Inclusion',
-    'qoa': 'Quality of Advice',
-    'ca': 'Centrelink Advice',
-    'gti': 'Gearing to Invest',
-    'product': 'Product',
-    'pri': 'Personal Risk Insurance',
-    'ss': 'Super Switching',
-    'fdad': 'Free Disclosures and Disclaimers',
+    'INC': 'Standard Document Inclusion',
+    'ADV': 'Quality of Advice',
+    'CTL': 'Centrelink Advice',
+    'GBL': 'Gearing to Invest',
+    'PRD': 'Product',
+    'RSK': 'Personal Risk Insurance',
+    'SSL': 'Super Switching',
+    'FEE': 'Free Disclosures and Disclaimers',
 }
 
 export default class ChecklistCatDropdown extends AbstractDropdown {

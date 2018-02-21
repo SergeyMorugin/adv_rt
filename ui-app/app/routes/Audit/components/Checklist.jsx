@@ -25,6 +25,24 @@ export default class Checklist extends Component {
         this.activateItem = this.activateItem.bind(this);
     }
 
+    componentDidUpdate(prevProps) {
+
+        // if section changed, clear previous section, highlight the new one and scroll to it
+        if (this.props.category && prevProps.category !== this.props.category) {
+
+            // get new section to scroll to
+            let sectionToScrollTo = this.checklistWrapper.querySelector(`.category--${this.props.category}`);
+            // scroll to and highlight section
+            if (sectionToScrollTo) {
+                sectionToScrollTo.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                console.warn(`Cannot find category ${this.props.category}.`)
+            }
+        }
+    }
+
     activateItem(itemKey) {
 
         if (this.state.activeItemKey === itemKey) {
@@ -62,7 +80,7 @@ export default class Checklist extends Component {
         }
 
         return (
-            <ol className={ styles.checklist }>
+            <ol className={ styles.checklist } ref={(e) => (this.checklistWrapper = e)}>
                 {items.map((item, index) => (
                     <ChecklistItem
                         key={item.key}

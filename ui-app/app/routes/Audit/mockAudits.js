@@ -23,14 +23,21 @@ export default {
                     id: 1,
                     documentType: 'SOA',
                     documentFileType: 'pdf',
-                    documentTitle: 'Fergusson SOA 020318.pdf'
+                    documentTitle: 'Adviser 1 Audit Report 09012018 Draft Redacted.pdf'
                 },
                 {
                     key: 2,
                     id: 2,
                     documentType: 'SOA',
-                    documentFileType: 'pdf',
-                    documentTitle: 'Fergusson SOA 100318.pdf'
+                    documentFileType: 'doc',
+                    documentTitle: 'SOA - Client 1 Redacted.doc'
+                },
+                {
+                    key: 3,
+                    id: 3,
+                    documentType: 'SOA',
+                    documentFileType: 'doc',
+                    documentTitle: 'Fact Find.doc'
                 }
             ]
         },

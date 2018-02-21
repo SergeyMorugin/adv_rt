@@ -7,6 +7,9 @@ import DropdownDefaultOpener from '../../../components/common/DropdownDefaultOpe
 
 import Ink from 'react-ink'
 
+import pdfIcon from "../../../images/if_pdf_272699.svg"
+import wordIcon from "../../../images/if_word_272702.svg"
+
 export default class DocumentDropdown extends AbstractDropdown {
 
     constructor(props) {
@@ -33,10 +36,12 @@ export default class DocumentDropdown extends AbstractDropdown {
         return <small className="muted">Select a document...</small>
     }
 
-    getFileIconClass(fileType) {
+    getFileIconPath(fileType) {
         switch (fileType) {
             case 'pdf':
-                return 'far fa-file-pdf';
+                return pdfIcon;
+            case 'doc':
+                return wordIcon;
 
             default:
                 return 'far fa-file';
@@ -60,7 +65,7 @@ export default class DocumentDropdown extends AbstractDropdown {
                                 onClick={() => {this.handleDocumentDdItemClick(doc)}}
                             >
                                 <div className={ styles.docListItem }>
-                                    <i className={this.getFileIconClass(doc.documentFileType)}></i>
+                                    <img src={this.getFileIconPath(doc.documentFileType)}/>
                                     <div>
                                         <div className={ styles.documentType }>{doc.documentType}</div>
                                         <div>{doc.documentTitle}</div>

@@ -37,6 +37,7 @@
 
 .editableAuditName{
   position: relative;
+  width: 25%;
 
   input {
 
@@ -46,16 +47,16 @@
       box-shadow: none;
     }
 
+    font-size: 1.3rem;
     color: $color-light-grey;
     background: transparent;
     border-color: transparent;
     box-shadow: none;
     display: inline-block;
-    width: 400px;
+    width: 100%;
     margin: 0;
     padding:5px;
     margin-left: -5px;
-    font-size: 1rem;
     font-weight: 300;
 
 

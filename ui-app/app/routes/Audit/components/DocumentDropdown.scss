@@ -17,10 +17,8 @@
     background: #EEE;
   }
 
-  &>i{
-    font-size: 37px;
+  &>img{
     margin-right: 12px;
-    color: $color-light-grey;
   }
 }
 
@@ -32,7 +30,7 @@
 
 .addFile{
   color: $color-lighter-grey;
-  border: 2px dashed $color-lighter-grey;
+  border: 1px dashed $color-lighter-grey;
   border-radius: 5px;
   display: flex;
   align-items: center;

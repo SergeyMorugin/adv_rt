@@ -82,6 +82,12 @@ module.exports = ({ base }) => {
                         },
                         { loader: 'sass-loader' }
                     ]
+            }, {
+                test: /\.html$/,
+                loader: 'raw-loader'
+            }, {
+                test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+                loader: "file-loader"
             }]
         },
 
