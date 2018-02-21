@@ -19,7 +19,7 @@ export default class DocumentOptionsDropdown extends AbstractDropdown {
         return (
             <div>
                 <div className={ styles.opener } onClick={this.toggleOpen}>
-                    <i className="fas fa-ellipsis-v"/>
+                    <i className="fal fa-ellipsis-v"/>
                     <Ink background={false} duration={600}/>
                 </div>
 

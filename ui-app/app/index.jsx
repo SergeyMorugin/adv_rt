@@ -13,6 +13,9 @@ import reducers from './reducers'
 import App from './components/App'
 import signOut from "~/actions/signOut";
 
+import fa from "./sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fontawesome.css"
+import fal from "./sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fa-light.css"
+
 // create history
 const history = createHistory()
 
