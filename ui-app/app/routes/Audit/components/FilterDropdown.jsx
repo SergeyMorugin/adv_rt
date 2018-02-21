@@ -11,12 +11,12 @@ import Checkbox from '../../../components/common/Checkbox'
 import Ink from 'react-ink'
 
 const statusList = {
-    'none': 'Needs Attention',
-    'best_practise': 'Best Practise',
-    'pass': 'Pass',
-    'partial_complete': 'Partial Complete',
-    'fail': 'Fail',
-    'not_applicable': 'Not Applicable',
+    'none': { label: 'Needs Attention', color: 'white'},
+    'best_practise':  { label: 'Best Practise', color: 'blue'},
+    'pass':  { label: 'Pass', color: 'green'},
+    'partial_complete':  { label: 'Partial Complete', color: 'orange'},
+    'fail':  { label: 'Fail', color: 'red'},
+    'not_applicable':  { label: 'Not Applicable', color: 'grey'},
 }
 
 export default class FilterDropdown extends AbstractDropdown {
@@ -55,14 +55,14 @@ export default class FilterDropdown extends AbstractDropdown {
                                 <li key={status}>
                                     <a className={ styles.listItem }>
                                         <Checkbox
-                                            color="green"
+                                            color={statusList[status].color}
                                             beforeLabel
                                             checked={this.props.activeFilters.indexOf(status) >= 0}
                                             onChange={ (e) => {
                                                 this.props.setFilter(status, e.target.checked)
                                             }}
                                         >
-                                            {statusList[status]}&nbsp;<small>({menuItems[status] || 0})</small>
+                                            {statusList[status].label}&nbsp;<small>({menuItems[status] || 0})</small>
                                         </Checkbox>
                                     </a>
                                 </li>
