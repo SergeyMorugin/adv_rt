@@ -1,0 +1,147 @@
+$green: map-get($foundation-palette, pass);
+$red: map-get($foundation-palette, fail);
+$blue: map-get($foundation-palette, bestPractise);
+$orange: map-get($foundation-palette, partialComplete);
+
+.labelCheckbox {
+  position: relative;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  input {
+    display: none;
+
+    &+div{
+
+      display: inline-block;
+      border: 1px solid $color-light-grey;
+      width: 13px;
+      height: 13px;
+      border-radius: 2px;
+      position: relative;
+      overflow: visible;
+
+      svg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(1, 1);
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+
+        circle{
+          width: 100%;
+          height: 100%;
+          fill: #999;
+          opacity: 0.45;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        width: 7px;
+        height: 4px;
+        z-index:5;
+
+        border: 2px solid #FFF;
+        border-radius: 3px;
+        border-top-style: none;
+        border-right-style: none;
+
+        transform: scale(0, 0) rotate(-45deg);
+        transition: all .3s ease-in-out;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+
+        background: $color-light-grey;
+        transform: scale(0, 0);
+        transition: all .2s ease-in-out;
+      }
+
+      &:global{
+        &.green{
+          &:after{
+            background: $green;
+          }
+        }
+        &.red{
+          &:after{
+            background: $red;
+          }
+        }
+        &.white{
+          &:after{
+            background: #FFF;
+          }
+          &:before{
+            border-color: #585858;
+          }
+        }
+        &.blue{
+          &:after{
+            background: $blue;
+          }
+        }
+        &.orange{
+          &:after{
+            background: $orange;
+          }
+        }
+      }
+
+    }
+
+    &:checked+div{
+      &:before{
+        transform: scale(1, 1) rotate(-45deg);
+      }
+
+      &:after{
+        transform: scale(1, 1);
+      }
+
+      &:global{
+        &.green{
+            border-color: $green;
+        }
+        &.red{
+            border-color: $red;
+        }
+        &.white{
+            border-color: #ADADAD;
+        }
+        &.blue{
+            border-color: $blue;
+        }
+        &.orange{
+            border-color: $orange;
+        }
+      }
+
+    }
+  }
+
+  svg.rippleIn{
+    opacity: 1;
+    transform: scale(3.4, 3.4);
+  }
+  svg.rippleOff{
+    opacity: 0;
+  }
+}

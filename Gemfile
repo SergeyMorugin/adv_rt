@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 # use WebPacker to enable React ― See React with webpacker and Rails 5.1 Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 3.2'
+#gem 'react_on_rails', '10.0.2'
+
 
 # used on Frontend for fonts and icons.
 gem 'font-awesome-rails'

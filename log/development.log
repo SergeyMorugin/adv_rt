@@ -2294,3 +2294,304 @@ puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.2) lib/puma/server.rb:438:in `process_client'
 puma (3.11.2) lib/puma/server.rb:302:in `block in run'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (29.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAudits (20180210001524)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "audits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210001524"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAuditProfiles (20180210001530)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "audit_profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210001530"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRegulations (20180210001557)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "regulations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "category" varchar(10), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210001557"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRegulationRules (20180210001630)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "regulation_rules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "category" varchar(10), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210001630"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDocuments (20180210001657)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "doctype" varchar(4), "content_text" text, "content_html" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210001657"]]
+  [1m[35m (16.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDelayedJobs (20180210130452)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "delayed_jobs"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "delayed_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "priority" integer DEFAULT 0 NOT NULL, "attempts" integer DEFAULT 0 NOT NULL, "handler" text NOT NULL, "last_error" text, "run_at" datetime, "locked_at" datetime, "failed_at" datetime, "locked_by" varchar, "queue" varchar, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "delayed_jobs_priority" ON "delayed_jobs" ("priority", "run_at")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180210130452"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-12 10:20:58.276112"], ["updated_at", "2018-03-12 10:20:58.276112"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='delayed_jobs_priority' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='delayed_jobs_priority' AND type='index'
+[0m
+Started GET "/" for 192.168.1.101 at 2018-03-12 13:21:22 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/pages_controller.rb:3:in `home'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (58.9ms)[0m  [1m[31mDELETE FROM "documents"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "documents" ("name", "doctype", "content_text", "content_html", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Test Document"], ["doctype", "pdf"], ["content_text", "this is a content_text"], ["content_html", "<p>this <strong>is a</strong> content_html</p>"], ["created_at", "2018-03-12 10:22:09.175530"], ["updated_at", "2018-03-12 10:22:09.175530"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "documents" ("name", "doctype", "content_text", "content_html", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Just another Document"], ["doctype", "docx"], ["content_text", "this is an OTHER content_text"], ["content_html", "<p>this is an OTHER <strong>content_html</strong></p>"], ["created_at", "2018-03-12 10:22:09.190805"], ["updated_at", "2018-03-12 10:22:09.190805"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "documents" ("name", "doctype", "content_text", "content_html", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Some Spreadsheet document"], ["doctype", "xlsx"], ["content_text", "this is an XLS content_text"], ["content_html", "<p>this is an <em>XLS</em> content_html</p>"], ["created_at", "2018-03-12 10:22:09.202537"], ["updated_at", "2018-03-12 10:22:09.202537"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 192.168.1.101 at 2018-03-12 13:22:19 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (5795.3ms)
+Completed 200 OK in 5857ms (Views: 5799.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/documents/1" for 192.168.1.101 at 2018-03-12 13:22:25 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::DocumentsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering api/documents/show.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "documents"."id" FROM "documents" WHERE (id > 1)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "documents"."id" FROM "documents" WHERE (id < 1)[0m
+  Rendered api/documents/show.json.jbuilder (7.6ms)
+Completed 200 OK in 53ms (Views: 8.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/documents/1" for 192.168.1.101 at 2018-03-12 13:22:25 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::DocumentsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (2.7ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering api/documents/show.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "documents"."id" FROM "documents" WHERE (id > 1)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "documents"."id" FROM "documents" WHERE (id < 1)[0m
+  Rendered api/documents/show.json.jbuilder (2.2ms)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/?document=1" for 192.168.1.101 at 2018-03-12 13:42:43 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Parameters: {"document"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (6.1ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/documents/1" for 192.168.1.101 at 2018-03-12 13:42:45 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Api::DocumentsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering api/documents/show.json.jbuilder
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "documents"."id" FROM "documents" WHERE (id > 1)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "documents"."id" FROM "documents" WHERE (id < 1)[0m
+  Rendered api/documents/show.json.jbuilder (2.3ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 14:53:38 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (1511.8ms)
+Completed 500 Internal Server Error in 1550ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Webpacker can't find index.js in /home/matthew/RubymineProjects/adv_rt/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/application-5bb01e821d998de4d02b.js",
+  "application.js.map": "/packs/application-5bb01e821d998de4d02b.js.map",
+  "documents.js": "/packs/documents-38aeb9fcf2a1850f400b.js",
+  "documents.js.map": "/packs/documents-38aeb9fcf2a1850f400b.js.map"
+}
+):
+    3:     
+    4: <div id='documents' data-starting-document-id='<%= @first_document_id %>'></div>
+    5: <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6: <%= javascript_pack_tag 'index' %>
+  
+app/views/pages/home.html.erb:6:in `_app_views_pages_home_html_erb__2364862658695368668_32644760'
+Started GET "/" for 192.168.1.101 at 2018-03-12 15:02:44 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (1192.2ms)
+Completed 500 Internal Server Error in 1226ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Webpacker can't find index.js in /home/matthew/RubymineProjects/adv_rt/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/application-5bb01e821d998de4d02b.js",
+  "application.js.map": "/packs/application-5bb01e821d998de4d02b.js.map",
+  "documents.js": "/packs/documents-38aeb9fcf2a1850f400b.js",
+  "documents.js.map": "/packs/documents-38aeb9fcf2a1850f400b.js.map"
+}
+):
+    3:     
+    4: <div id='documents' data-starting-document-id='<%#= @first_document_id %>'></div>
+    5: <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6: <%= javascript_pack_tag 'index' %>
+  
+app/views/pages/home.html.erb:6:in `_app_views_pages_home_html_erb__3927960376748069560_38177680'
+Started GET "/" for 192.168.1.101 at 2018-03-12 15:04:40 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (1108.8ms)
+Completed 500 Internal Server Error in 1121ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Webpacker can't find index.js in /home/matthew/RubymineProjects/adv_rt/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/application-5bb01e821d998de4d02b.js",
+  "application.js.map": "/packs/application-5bb01e821d998de4d02b.js.map",
+  "documents.js": "/packs/documents-38aeb9fcf2a1850f400b.js",
+  "documents.js.map": "/packs/documents-38aeb9fcf2a1850f400b.js.map"
+}
+):
+    3:     
+    4: <div id='documents' data-starting-document-id='<%#= @first_document_id %>'></div>
+    5: <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6: <%= javascript_pack_tag 'index' %>
+  
+app/views/pages/home.html.erb:6:in `_app_views_pages_home_html_erb__830839415097345496_35865960'
+Started GET "/" for 192.168.1.101 at 2018-03-12 15:12:02 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: f6e4e4e3375d6d5fbb0c
+Version: webpack 3.11.0
+Time: 941ms
+                                  Asset       Size  Chunks             Chunk Names
+    application-edfc19543e3d5e425aad.js    3.96 kB       0  [emitted]  application
+application-edfc19543e3d5e425aad.js.map    2.49 kB       0  [emitted]  application
+                          manifest.json  142 bytes          [emitted]  
+   [0] ./app/javascript/packs/application.scss 1.21 kB {0} [built] [failed] [1 error]
+   [1] ./node_modules/css-loader??ref--2-2!./node_modules/postcss-loader/lib??ref--2-3!./node_modules/sass-loader/lib/loader.js??ref--2-4!./app/javascript/packs/application.scss 387 bytes [built] [failed] [1 error]
+    + 2 hidden modules
+
+ERROR in ./node_modules/css-loader??ref--2-2!./node_modules/postcss-loader/lib??ref--2-3!./node_modules/sass-loader/lib/loader.js??ref--2-4!./app/javascript/packs/application.scss
+Module build failed: 
+@import 'foundation-sites/scss/util/util';
+^
+      File to import not found or unreadable: foundation-sites/scss/util/util.
+Parent style sheet: /home/matthew/RubymineProjects/adv_rt/app/javascript/sass/_foundation_settings.scss
+      in /home/matthew/RubymineProjects/adv_rt/app/javascript/sass/_foundation_settings.scss (line 63, column 1)
+ @ ./app/javascript/packs/application.scss 4:14-215
+
+ERROR in ./app/javascript/packs/application.scss
+Module build failed: ModuleBuildError: Module build failed: 
+@import 'foundation-sites/scss/util/util';
+^
+      File to import not found or unreadable: foundation-sites/scss/util/util.
+Parent style sheet: /home/matthew/RubymineProjects/adv_rt/app/javascript/sass/_foundation_settings.scss
+      in /home/matthew/RubymineProjects/adv_rt/app/javascript/sass/_foundation_settings.scss (line 63, column 1)
+    at runLoaders (/home/matthew/RubymineProjects/adv_rt/node_modules/webpack/lib/NormalModule.js:195:19)
+    at /home/matthew/RubymineProjects/adv_rt/node_modules/loader-runner/lib/LoaderRunner.js:364:11
+    at /home/matthew/RubymineProjects/adv_rt/node_modules/loader-runner/lib/LoaderRunner.js:230:18
+    at context.callback (/home/matthew/RubymineProjects/adv_rt/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at Object.asyncSassJobQueue.push [as callback] (/home/matthew/RubymineProjects/adv_rt/node_modules/sass-loader/lib/loader.js:55:13)
+    at Object.done [as callback] (/home/matthew/RubymineProjects/adv_rt/node_modules/neo-async/async.js:7921:18)
+    at options.error (/home/matthew/RubymineProjects/adv_rt/node_modules/node-sass/lib/index.js:294:32)
+ @ ./app/javascript/packs/application.scss
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js??ref--2-3!node_modules/sass-loader/lib/loader.js??ref--2-4!app/javascript/packs/application.scss:
+       [0] ./node_modules/css-loader??ref--2-2!./node_modules/postcss-loader/lib??ref--2-3!./node_modules/sass-loader/lib/loader.js??ref--2-4!./app/javascript/packs/application.scss 387 bytes {0} [built] [failed] [1 error]
+    
+    ERROR in ./node_modules/css-loader??ref--2-2!./node_modules/postcss-loader/lib??ref--2-3!./node_modules/sass-loader/lib/loader.js??ref--2-4!./app/javascript/packs/application.scss
+    Module build failed: 
+    @import 'foundation-sites/scss/util/util';
+    ^
+          File to import not found or unreadable: foundation-sites/scss/util/util.
+    Parent style sheet: /home/matthew/RubymineProjects/adv_rt/app/javascript/sass/_foundation_settings.scss
+          in /home/matthew/RubymineProjects/adv_rt/app/javascript/sass/_foundation_settings.scss (line 63, column 1)
+
+
+  Rendered pages/home.html.erb (4020.8ms)
+Completed 200 OK in 4033ms (Views: 4022.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 15:12:37 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (9.0ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 15:12:54 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (7.2ms)
+Completed 200 OK in 21ms (Views: 10.7ms | ActiveRecord: 0.6ms)
+
+
