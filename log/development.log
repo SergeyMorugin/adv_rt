@@ -2595,3 +2595,161 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 21ms (Views: 10.7ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 192.168.1.101 at 2018-03-12 16:35:30 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (3794.7ms)
+Completed 200 OK in 3809ms (Views: 3797.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 16:35:50 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (6.4ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 16:37:50 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (8.0ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 16:39:05 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (11.4ms)
+Completed 200 OK in 26ms (Views: 13.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 16:40:16 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (3995.8ms)
+Completed 200 OK in 4008ms (Views: 3998.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 16:42:05 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (13.8ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 16:42:07 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (11.2ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 16:59:45 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (11.0ms)
+Completed 200 OK in 22ms (Views: 13.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/packs/application-6555ffc8eef5d4dc7015.js" for 192.168.1.101 at 2018-03-12 16:59:45 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/packs/application-6555ffc8eef5d4dc7015.js"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.2.1) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/packs/application-318ace9438fee4c754765d61fe434897.css" for 192.168.1.101 at 2018-03-12 16:59:45 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/packs/application-318ace9438fee4c754765d61fe434897.css"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.2.1) lib/webpacker/dev_server_proxy.rb:18:in `perform_request'
+rack-proxy (0.6.3) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 192.168.1.101 at 2018-03-12 17:00:09 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (4011.6ms)
+Completed 200 OK in 4025ms (Views: 4013.9ms | ActiveRecord: 0.8ms)
+
+

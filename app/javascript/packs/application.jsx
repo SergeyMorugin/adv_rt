@@ -25,7 +25,7 @@ const store = createStore(
     applyMiddleware(thunk, routerMiddleware(history)),
 )
 
-const ConnectedApp = connect(
+const Application = connect(
     store => ({
         isAuthenticated: store.auth.isAuthenticated,
     }),
@@ -39,7 +39,7 @@ const ConnectedApp = connect(
 
 render(
     <Provider store={store}>
-        <ConnectedApp history={history}/>
+        <Application history={history}/>
     </Provider>,
     document.getElementById('root'),
 )
