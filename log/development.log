@@ -2753,3 +2753,344 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 4025ms (Views: 4013.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:38:40 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (5489.3ms)
+Completed 200 OK in 5504ms (Views: 5492.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:45:39 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (16.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Webpacker can't find hello-react.js in /home/matthew/RubymineProjects/adv_rt/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.css": "/packs/application-318ace9438fee4c754765d61fe434897.css",
+  "application.css.map": "/packs/application-318ace9438fee4c754765d61fe434897.css.map",
+  "application.js": "/packs/application-4183ad6a1c58eda6c076.js",
+  "application.js.map": "/packs/application-4183ad6a1c58eda6c076.js.map",
+  "hello_react.js": "/packs/hello_react-e2321ae4ac268f39dbfb.js",
+  "hello_react.js.map": "/packs/hello_react-e2321ae4ac268f39dbfb.js.map"
+}
+):
+    11:         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    12:         <%= javascript_pack_tag 'application' %>
+    13:         <%= stylesheet_pack_tag 'application' %>
+    14:         <%= javascript_pack_tag 'hello-react' %>
+    15:     </head>
+    16:     <body>
+    17:         <!--[if lt IE 10]>
+  
+app/views/pages/home.html.erb:14:in `_app_views_pages_home_html_erb__644316724006612921_70325190878620'
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:46:01 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (1.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (34.4ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (Webpacker can't find hello-react.js in /home/matthew/RubymineProjects/adv_rt/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.css": "/packs/application-318ace9438fee4c754765d61fe434897.css",
+  "application.css.map": "/packs/application-318ace9438fee4c754765d61fe434897.css.map",
+  "application.js": "/packs/application-4183ad6a1c58eda6c076.js",
+  "application.js.map": "/packs/application-4183ad6a1c58eda6c076.js.map",
+  "hello_react.js": "/packs/hello_react-e2321ae4ac268f39dbfb.js",
+  "hello_react.js.map": "/packs/hello_react-e2321ae4ac268f39dbfb.js.map"
+}
+):
+    11:         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    12:         <%= javascript_pack_tag 'application' %>
+    13:         <%= stylesheet_pack_tag 'application' %>
+    14:         <%= javascript_pack_tag 'hello-react' %>
+    15:     </head>
+    16:     <body>
+    17:         <!--[if lt IE 10]>
+  
+app/views/pages/home.html.erb:14:in `_app_views_pages_home_html_erb___3060862662387805184_45462620'
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:46:40 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (28.8ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:46:42 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (18.4ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:46:53 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (25.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Webpacker can't find hello-react.js in /home/matthew/RubymineProjects/adv_rt/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.css": "/packs/application-318ace9438fee4c754765d61fe434897.css",
+  "application.css.map": "/packs/application-318ace9438fee4c754765d61fe434897.css.map",
+  "application.js": "/packs/application-4183ad6a1c58eda6c076.js",
+  "application.js.map": "/packs/application-4183ad6a1c58eda6c076.js.map",
+  "hello_react.js": "/packs/hello_react-e2321ae4ac268f39dbfb.js",
+  "hello_react.js.map": "/packs/hello_react-e2321ae4ac268f39dbfb.js.map"
+}
+):
+    11:         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    12:         <%= javascript_pack_tag 'application' %>
+    13:         <%= stylesheet_pack_tag 'application' %>
+    14:         <%= javascript_pack_tag 'hello-react' %>
+    15:     </head>
+    16:     <body>
+    17:         <!--[if lt IE 10]>
+  
+app/views/pages/home.html.erb:14:in `_app_views_pages_home_html_erb___3060862662387805184_37293640'
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:47:05 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (91.4ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Webpacker can't find hello-react.js in /home/matthew/RubymineProjects/adv_rt/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.css": "/packs/application-318ace9438fee4c754765d61fe434897.css",
+  "application.css.map": "/packs/application-318ace9438fee4c754765d61fe434897.css.map",
+  "application.js": "/packs/application-4183ad6a1c58eda6c076.js",
+  "application.js.map": "/packs/application-4183ad6a1c58eda6c076.js.map",
+  "hello_react.js": "/packs/hello_react-e2321ae4ac268f39dbfb.js",
+  "hello_react.js.map": "/packs/hello_react-e2321ae4ac268f39dbfb.js.map"
+}
+):
+    11:         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    12:         <%= javascript_pack_tag 'application' %>
+    13:         <%= stylesheet_pack_tag 'application' %>
+    14:         <%= javascript_pack_tag 'hello-react' %>
+    15:     </head>
+    16:     <body>
+    17:         <!--[if lt IE 10]>
+  
+app/views/pages/home.html.erb:14:in `_app_views_pages_home_html_erb___3060862662387805184_45319060'
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:47:18 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+  Rendered pages/home.html.erb (16.2ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 21:52:02 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (5140.1ms)
+Completed 200 OK in 5153ms (Views: 5142.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 23:23:00 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (7207.5ms)
+Completed 200 OK in 7226ms (Views: 7213.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 23:27:37 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (7085.7ms)
+Completed 200 OK in 7088ms (Views: 7086.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 23:28:39 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (6887.5ms)
+Completed 200 OK in 6902ms (Views: 6889.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 23:32:36 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 9067c1c1b39d3ff87fcf
+Version: webpack 3.10.0
+Time: 6138ms
+                                                                                                            Asset     Size  Chunks                    Chunk Names
+                                                                 application-43b78b2d5a31b83c601932379ebbfe01.css   150 kB       0  [emitted]         application
+  sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300-d04e7c7a32ec3df6ee6cad38f99e4f2c.eot   172 kB          [emitted]         
+ sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300-563925f7d15a0f5ab8d6b764b5b4645e.woff  78.7 kB          [emitted]         
+  sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300-c183e1e55f4776c764b0349b484dca03.ttf   172 kB          [emitted]         
+  sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300-3b91afa2af4e700731a28a552bc0cb16.svg   642 kB          [emitted]  [big]  
+                                                                              application-a8905c519b18908252f3.js   978 kB       0  [emitted]  [big]  application
+                                                                              hello_react-93665c9b5a37403e2d1e.js   658 kB       1  [emitted]  [big]  hello_react
+                                                                          src/application-87b444ccff7beb3c2e4c.js  2.81 kB       2  [emitted]         src/application
+sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300-7cc3813fd8210dc22ed2cc16891d0c6d.woff2  61.5 kB          [emitted]         
+                                                             src/application-318ace9438fee4c754765d61fe434897.css  99.8 kB       2  [emitted]         src/application
+                                                                          application-a8905c519b18908252f3.js.map  1.07 MB       0  [emitted]         application
+                                                             application-43b78b2d5a31b83c601932379ebbfe01.css.map   321 kB       0  [emitted]         application
+                                                                          hello_react-93665c9b5a37403e2d1e.js.map   764 kB       1  [emitted]         hello_react
+                                                                      src/application-87b444ccff7beb3c2e4c.js.map  2.74 kB       2  [emitted]         src/application
+                                                         src/application-318ace9438fee4c754765d61fe434897.css.map   253 kB       2  [emitted]         src/application
+                                                                                                    manifest.json  1.83 kB          [emitted]         
+  [60] ./app/javascript/packs/application.jsx 1.9 kB {0} [built]
+  [61] ./app/javascript/sass/app.scss 41 bytes {0} [built]
+ [116] ./app/javascript/reducers/index.js 109 bytes {0} [built]
+ [117] ./app/javascript/reducers/auth.js 1.13 kB {0} [built]
+ [118] ./app/javascript/reducers/audit.js 2.57 kB {0} [built]
+ [121] ./app/javascript/actions/signOut.js 82 bytes {0} [built]
+ [122] ./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fontawesome.css 41 bytes {0} [built]
+ [123] ./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fa-light.css 41 bytes {0} [built]
+ [124] ./app/javascript/packs/hello_react.jsx 739 bytes {1} [built]
+ [128] ./app/javascript/packs/src/application.scss 41 bytes {2} [built]
+ [129] ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./node_modules/sass-loader/lib/loader.js?{"sourceMap":true}!./app/javascript/sass/app.scss 405 kB [built]
+ [134] ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fontawesome.css 136 kB [built]
+ [135] ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fa-light.css 2.06 kB [built]
+ [140] ./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300.ttf 157 bytes [built]
+ [142] ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./node_modules/sass-loader/lib/loader.js?{"sourceMap":true}!./app/javascript/packs/src/application.scss 405 kB [built]
+    + 128 hidden modules
+
+ERROR in ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./node_modules/sass-loader/lib/loader.js?{"sourceMap":true}!./app/javascript/components/App.scss
+Module build failed: 
+    background: $header-bg-color;
+               ^
+      Undefined variable: "$header-bg-color".
+      in /home/matthew/RubymineProjects/adv_rt/app/javascript/components/App.scss (line 4, column 17)
+ @ ./app/javascript/components/App.scss 4:14-207
+ @ ./app/javascript/packs/application.jsx
+
+ERROR in ./app/javascript/components/App.scss
+Module build failed: ModuleBuildError: Module build failed: 
+    background: $header-bg-color;
+               ^
+      Undefined variable: "$header-bg-color".
+      in /home/matthew/RubymineProjects/adv_rt/app/javascript/components/App.scss (line 4, column 17)
+    at runLoaders (/home/matthew/RubymineProjects/adv_rt/node_modules/webpack/lib/NormalModule.js:195:19)
+    at /home/matthew/RubymineProjects/adv_rt/node_modules/loader-runner/lib/LoaderRunner.js:364:11
+    at /home/matthew/RubymineProjects/adv_rt/node_modules/loader-runner/lib/LoaderRunner.js:230:18
+    at context.callback (/home/matthew/RubymineProjects/adv_rt/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at Object.asyncSassJobQueue.push [as callback] (/home/matthew/RubymineProjects/adv_rt/node_modules/sass-loader/lib/loader.js:55:13)
+    at Object.done [as callback] (/home/matthew/RubymineProjects/adv_rt/node_modules/neo-async/async.js:7921:18)
+    at options.error (/home/matthew/RubymineProjects/adv_rt/node_modules/node-sass/lib/index.js:294:32)
+ @ ./app/javascript/components/App.scss
+ @ ./app/javascript/packs/application.jsx
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js??ref--2-3!node_modules/sass-loader/lib/loader.js??ref--2-4!app/javascript/components/App.scss:
+       1 module
+    
+    ERROR in ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./node_modules/sass-loader/lib/loader.js?{"sourceMap":true}!./app/javascript/components/App.scss
+    Module build failed: 
+        background: $header-bg-color;
+                   ^
+          Undefined variable: "$header-bg-color".
+          in /home/matthew/RubymineProjects/adv_rt/app/javascript/components/App.scss (line 4, column 17)
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fontawesome.css:
+       [0] ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fontawesome.css 136 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fa-light.css:
+     5 assets
+       [0] ./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300.eot 157 bytes {0} [built]
+       [1] ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fa-light.css 2.06 kB {0} [built]
+       [4] ./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300.woff2 159 bytes {0} [built]
+       [5] ./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300.woff 158 bytes {0} [built]
+       [6] ./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300.ttf 157 bytes {0} [built]
+       [7] ./app/javascript/sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/webfonts/fa-light-300.svg 157 bytes {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js??ref--2-3!node_modules/sass-loader/lib/loader.js??ref--2-4!app/javascript/packs/src/application.scss:
+       [0] ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./node_modules/sass-loader/lib/loader.js?{"sourceMap":true}!./app/javascript/packs/src/application.scss 405 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js??ref--2-3!node_modules/sass-loader/lib/loader.js??ref--2-4!app/javascript/sass/app.scss:
+       [0] ./node_modules/css-loader?{"minimize":false,"sourceMap":true,"importLoaders":2}!./node_modules/postcss-loader/lib?{"sourceMap":true,"config":{"path":"/home/matthew/RubymineProjects/adv_rt/.postcssrc.yml"}}!./node_modules/sass-loader/lib/loader.js?{"sourceMap":true}!./app/javascript/sass/app.scss 405 kB {0} [built]
+        + 1 hidden module
+
+
+  Rendered pages/home.html.erb (7153.4ms)
+Completed 200 OK in 7169ms (Views: 7156.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 192.168.1.101 at 2018-03-12 23:39:43 +0300
+Cannot render console from 192.168.1.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/matthew/RubymineProjects/adv_rt/public/packs
+  Rendered pages/home.html.erb (8432.2ms)
+Completed 200 OK in 8444ms (Views: 8434.5ms | ActiveRecord: 0.7ms)
+
+
