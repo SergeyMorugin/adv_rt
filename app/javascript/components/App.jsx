@@ -13,7 +13,7 @@ import PrivateRoute from './PrivateRoute.jsx'
 import Searchbar from './Searchbar.jsx'
 
 // style
-import styles from './App2.scss';
+import styles from './App.scss';
 
 // Routes
 import SignIn from '../routes/Auth/SignIn';

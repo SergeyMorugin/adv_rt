@@ -39,10 +39,12 @@ gem 'webpacker', '~> 3.2'
 gem 'font-awesome-rails'
 
 ## Delayed jobs for background processing of work via Redis
-gem 'delayed_job_active_record'
+#gem 'delayed_job_active_record'
 
 # Allows versioning of active record models
 gem 'acts_as_versioned'
+
+gem 'sidekiq'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

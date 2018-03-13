@@ -52,7 +52,7 @@ environment.loaders.insert('html', {
  //   }
 //})
 
-console.log(environment)
+//console.log(environment)
 //const babelLoader = environment.loaders.get('babel')
 
 //environment.loaders.insert('babel', babelLoader, { before: 'css'} )
