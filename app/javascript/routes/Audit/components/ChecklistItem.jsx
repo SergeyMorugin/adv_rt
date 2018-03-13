@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styles from './ChecklistItem.scss';
 
 import Ink from 'react-ink'
-import Checkbox from '../../../components/common/Checkbox'
+import Checkbox from '../../../components/common/Checkbox.jsx'
 
 export default class ChecklistItem extends Component {
 

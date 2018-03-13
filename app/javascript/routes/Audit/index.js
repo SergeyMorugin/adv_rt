@@ -1,16 +1,16 @@
 import React from 'react';
 import {connect} from "react-redux";
 
-import Container from './components/Audit'
+import Container from './components/Audit.jsx'
 
-import fetchAudit from '~/actions/fetchAudit'
-import fetchAuditSuccess from '~/actions/fetchAuditSuccess'
-import fetchAuditFail from '~/actions/fetchAuditFail'
-import fetchDocument from '~/actions/fetchDocument'
-import fetchDocumentSuccess from '~/actions/fetchDocumentSuccess'
-import fetchDocumentFail from '~/actions/fetchDocumentFail'
-import goToDocumentSection from '~/actions/goToDocumentSection'
-import auditPropertyUpdate from '~/actions/auditPropertyUpdate'
+import fetchAudit from '../../actions/fetchAudit'
+import fetchAuditSuccess from '../../actions/fetchAuditSuccess'
+import fetchAuditFail from '../../actions/fetchAuditFail'
+import fetchDocument from '../../actions/fetchDocument'
+import fetchDocumentSuccess from '../../actions/fetchDocumentSuccess'
+import fetchDocumentFail from '../../actions/fetchDocumentFail'
+import goToDocumentSection from '../../actions/goToDocumentSection'
+import auditPropertyUpdate from '../../actions/auditPropertyUpdate'
 
 import mockAudits from './mockAudits'
 import mockDocuments from './mockDocuments'

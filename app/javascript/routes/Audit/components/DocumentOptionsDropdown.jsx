@@ -3,9 +3,9 @@ import React from 'react';
 import styles from './DocumentOptionsDropdown.scss';
 import ddListStyles from '../../../components/common/DropdownList.scss';
 
-import AbstractDropdown from '../../../components/common/AbstractDropdown';
-import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
-import RadioButton from '../../../components/common/RadioButton'
+import AbstractDropdown from '../../../components/common/AbstractDropdown.jsx';
+import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox.jsx';
+import RadioButton from '../../../components/common/RadioButton.jsx';
 
 import Ink from 'react-ink'
 

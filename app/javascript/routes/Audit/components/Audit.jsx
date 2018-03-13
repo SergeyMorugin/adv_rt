@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import styles from './Audit.scss';
 
-import Spinner from '../../../components/common/Spinner'
-import Progressbar from '../../../components/common/Progressbar'
-import DocumentDropdown from './DocumentDropdown'
-import ChecklistCatDropdown from './ChecklistCatDropdown'
-import FilterDropdown from './FilterDropdown'
-import Checklist from './Checklist'
-import DocumentBody from './DocumentBody'
+import Spinner from '../../../components/common/Spinner.jsx'
+import Progressbar from '../../../components/common/Progressbar.jsx'
+import DocumentDropdown from './DocumentDropdown.jsx'
+import ChecklistCatDropdown from './ChecklistCatDropdown.jsx'
+import FilterDropdown from './FilterDropdown.jsx'
+import Checklist from './Checklist.jsx'
+import DocumentBody from './DocumentBody.jsx'
 import Ink from 'react-ink'
 
 import Dropzone from 'react-dropzone'

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './Checklist.scss';
 
-import ChecklistItem from './ChecklistItem'
+import ChecklistItem from './ChecklistItem.jsx'
 
 const statusSeverities = {
     'none': 1,

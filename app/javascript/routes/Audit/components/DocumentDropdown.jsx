@@ -1,9 +1,9 @@
 import React from 'react';
 
 import styles from './DocumentDropdown.scss';
-import AbstractDropdown from '../../../components/common/AbstractDropdown';
-import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
-import DropdownDefaultOpener from '../../../components/common/DropdownDefaultOpener';
+import AbstractDropdown from '../../../components/common/AbstractDropdown.jsx';
+import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox.jsx';
+import DropdownDefaultOpener from '../../../components/common/DropdownDefaultOpener.jsx';
 
 import Ink from 'react-ink'
 

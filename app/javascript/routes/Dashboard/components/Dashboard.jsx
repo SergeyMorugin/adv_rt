@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-import Widget from './Widget'
-import SingleMetric from './SingleMetric'
+import Widget from './Widget.jsx'
+import SingleMetric from './SingleMetric.jsx'
 
 import styles from './Dashboard.scss';
 

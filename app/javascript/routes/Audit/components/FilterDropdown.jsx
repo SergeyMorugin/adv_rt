@@ -3,10 +3,10 @@ import React from 'react';
 import styles from './FilterDropdown.scss';
 import ddListStyles from '../../../components/common/DropdownList.scss';
 
-import AbstractDropdown from '../../../components/common/AbstractDropdown';
-import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox';
+import AbstractDropdown from '../../../components/common/AbstractDropdown.jsx';
+import DropdownDefaultBox from '../../../components/common/DropdownDefaultBox.jsx';
 
-import Checkbox from '../../../components/common/Checkbox'
+import Checkbox from '../../../components/common/Checkbox.jsx'
 
 import Ink from 'react-ink'
 

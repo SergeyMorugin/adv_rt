@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import styles from './Audits.scss';
 
 import ReactTable from 'react-table'
-import Spinner from '../../../components/common/Spinner'
-import Progressbar from '../../../components/common/Progressbar'
+import Spinner from '../../../components/common/Spinner.jsx'
+import Progressbar from '../../../components/common/Progressbar.jsx'
 
 const columns = [{
     Header: 'Adviser',

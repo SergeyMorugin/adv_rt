@@ -1,7 +1,7 @@
-import "../sass/app.scss"
 import React from 'react'
-import ReactDOM from 'react-dom'
-//import { render } from 'react-dom'
+import { render } from 'react-dom'
+//import ReactDOM from 'react-dom'
+
 import { connect, Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 
@@ -12,9 +12,10 @@ import createHistory from 'history/createHashHistory'
 
 import reducers from '../reducers'
 
-import App from '../components/App'
-import signOut from "../actions/signOut";
+//import '../sass/application.scss'
 
+import App from '../components/App.jsx'
+import signOut from "../actions/signOut";
 
 import fa from "../sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fontawesome.css"
 import fal from "../sass/vendor/fontawesome-pro-5.0.6/web-fonts-with-css/css/fa-light.css"
@@ -28,7 +29,7 @@ const store = createStore(
     applyMiddleware(thunk, routerMiddleware(history)),
 )
 
-const Application = connect(
+const ConnectedApp = connect(
     store => ({
         isAuthenticated: store.auth.isAuthenticated,
     }),
@@ -40,19 +41,28 @@ const Application = connect(
     }),
 )(App);
 
-//render(
-//    <Provider store={store}>
-//        <Application history={history}/>
-//    </Provider>,
- //   document.getElementById('root'),
-//)
-
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Provider store={store}>
-        <Application history={history}/>
-    </Provider>,
-    document.body.appendChild(document.createElement('div')),
-  )
+    render(
+        <Provider store={store}>
+            <ConnectedApp history={history}/>
+        </Provider>,
+        document.getElementById('root'),
+    )
 })
+
+//document.addEventListener('DOMContentLoaded', () => {
+//  ReactDOM.render(
+//    <Provider store={store}>
+ //       <ConnectedApp history={history}/>
+  //  </Provider>,
+  // document.body.appendChild(document.createElement('div')),
+ // )
+//})
+
+//    <Provider store={store}>
+ //       <Application history={history}/>
+//    </Provider>,
+//    document.body.appendChild(document.createElement('div')),
+ // )
+//})
 

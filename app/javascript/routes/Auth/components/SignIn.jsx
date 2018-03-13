@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import styles from './SignIn.scss';
 
-class SignIn extends Component {
+export default class SignIn extends Component {
 
     constructor(props){
         super(props);
@@ -54,4 +54,4 @@ class SignIn extends Component {
     }
 }
 
-module.exports = SignIn;
+//module.exports = SignIn;

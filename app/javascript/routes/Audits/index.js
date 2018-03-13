@@ -2,13 +2,13 @@ import React from 'react';
 import {connect} from "react-redux";
 import {push} from "react-router-redux";
 
-import Container from './components/Audits'
+import Container from './components/Audits.jsx'
 
 import mockAudits from "../Audit/mockAudits";
 
-import fetchAuditList from '~/actions/fetchAuditList'
-import fetchAuditListSuccess from '~/actions/fetchAuditListSuccess'
-import fetchAuditListFail from '~/actions/fetchAuditListFail'
+import fetchAuditList from '../../actions/fetchAuditList'
+import fetchAuditListSuccess from '../../actions/fetchAuditListSuccess'
+import fetchAuditListFail from '../../actions/fetchAuditListFail'
 
 export default connect(
     state => {

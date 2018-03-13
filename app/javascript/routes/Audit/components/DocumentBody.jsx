@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import styles from './DocumentBody.scss';
 
-import Spinner from '../../../components/common/Spinner'
-import DocumentOptionsDropdown from './DocumentOptionsDropdown'
+import Spinner from '../../../components/common/Spinner.jsx'
+import DocumentOptionsDropdown from './DocumentOptionsDropdown.jsx'
 
 import { Scrollbars } from 'react-custom-scrollbars';
 

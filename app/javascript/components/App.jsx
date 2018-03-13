@@ -1,4 +1,4 @@
-import "../sass/app.scss"
+
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
@@ -6,14 +6,14 @@ import { NavLink } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux'
 
 // components
-import MenuIcon from './common/MenuIcon'
-import Sidebar from './Sidebar'
-import Identity from './Identity'
-import PrivateRoute from './PrivateRoute'
-import Searchbar from './Searchbar'
+import MenuIcon from './common/MenuIcon.jsx'
+import Sidebar from './Sidebar.jsx'
+import Identity from './Identity.jsx'
+import PrivateRoute from './PrivateRoute.jsx'
+import Searchbar from './Searchbar.jsx'
 
 // style
-import styles from './App.scss';
+import styles from './App2.scss';
 
 // Routes
 import SignIn from '../routes/Auth/SignIn';
