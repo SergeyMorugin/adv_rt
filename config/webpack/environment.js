@@ -40,17 +40,16 @@ environment.loaders.insert('html', {
 }, { after: 'sass'} )
 
 //environment.loaders.prepend('babel', {
-//    test: /\.jsx?$/,
 //    exclude: /node_modules/,
 //   loader: 'babel-loader',
-//    options: {
- //       babelrc: false,
- //       presets: [
-  //          ['env', { 'targets': { 'browsers': ['last 2 versions']}}],
-  //          'react',
-   //         'stage-0'
-  //      ]
-//    }
+ //   options: {
+//       babelrc: false,
+//       presets: [
+//          ['env', { 'targets': { 'browsers': ['last 2 versions']}}],
+ //         'react',
+ //        'stage-0'
+//      ]
+ //   }
 //})
 
 console.log(environment)
