@@ -28,6 +28,8 @@ yarn-error.log*
 adv_rt/ui-app/node_modules
 app/javascript2
 log
+ui-app
+
 
 # No need for Desktop Services Store: This file stores custom attributes such as position of folder icons and the choice of background colors
 .DS_Store

@@ -49,20 +49,3 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('root'),
     )
 })
-
-//document.addEventListener('DOMContentLoaded', () => {
-//  ReactDOM.render(
-//    <Provider store={store}>
- //       <ConnectedApp history={history}/>
-  //  </Provider>,
-  // document.body.appendChild(document.createElement('div')),
- // )
-//})
-
-//    <Provider store={store}>
- //       <Application history={history}/>
-//    </Provider>,
-//    document.body.appendChild(document.createElement('div')),
- // )
-//})
-
